@@ -13,44 +13,44 @@ const TeamMember = () => {
         linkedin: "#",
         email: "ceo.mealversity@gmail.com"
       },
-      expertise: ["Food Safety", "Business Strategy", "Customer Experience"]
+      expertise: ["Vision & Strategy", "Key Decisions", "Team Leadership"]
     },
     {
       id: 2,
       name: "Afreen Sarkar",
       role: "Co-Founder & CMO",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+      image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
       description: "Award-winning chef with expertise in creating nutritious and flavorful meals for all dietary needs.",
       social: {
         linkedin: "#",
         email: "cmo.mealversity@gmail.com"
       },
-      expertise: ["Nutrition", "Menu Development", "Quality Control"]
+      expertise: ["Marketing Strategy", "Campaigns", "Market Insights"]
     },
     {
       id: 3,
       name: "Asif Ahmed ",
       role: "Co-Founder & COO",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+      image: "/ashif-ahamed.jpeg",
       description: "Ensuring smooth operations and exceptional customer service across all our locations.",
       social: {
         linkedin: "#",
         email: "coo.mealversity@gmail.com "
       },
-      expertise: ["Operations", "Customer Service", "Logistics"]
+      expertise: ["Kitchen Operations", "Food Safety", "Quality Assurance"]
     },
     {
       id: 4,
       name: "Muklesur Rahaman",
       role: "Co-Founder & CFO",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80",
+      image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png",
       description: "Building innovative technology solutions to enhance the meal delivery experience.",
       social: {
         linkedin: "#",
    
         email: "cfo.mealversity@gmail.com"
       },
-      expertise: ["Software Development", "AI/ML", "System Architecture"]
+      expertise: ["Financial Planning", "Reports", "Cost Control"]
     },
     
   ]

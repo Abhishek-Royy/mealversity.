@@ -8,20 +8,6 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-left space-y-8">
-            {/* Launch Date Announcement */}
-            {/* <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 shadow-2xl border border-blue-200/20 backdrop-blur-sm">
-              <div className="flex items-center gap-3 mb-3">
-                <Calendar className="w-6 h-6 text-white" />
-                <span className="text-white font-semibold text-lg">Launch Announcement</span>
-              </div>
-              <p className="text-white/90 text-lg leading-relaxed">
-                Our app will be launching in <span className="font-bold text-yellow-300">September 10, 2025</span>
-              </p>
-              <div className="flex items-center gap-2 mt-3">
-                <Clock className="w-4 h-4 text-white/70" />
-                <span className="text-white/70 text-sm">Get ready for a revolutionary food experience!</span>
-              </div>
-            </div> */}
 
             <div className="space-y-6">
               <h1 className="text-4xl md:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
@@ -40,39 +26,9 @@ const Hero = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
               </a>
-              {/* <button className="border-2 border-orange-400 text-orange-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-orange-500 hover:bg-orange-50 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-                <Star className="w-5 h-5" />
-                Join Waitlist
-              </button> */}
+          
             </div>
 
-            {/* Enhanced Trust indicators */}
-            {/* <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Star className="w-5 h-5 text-orange-500" />
-                Why Choose MealVersity?
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="flex items-center space-x-3 text-sm">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-green-600" />
-                  </div>
-                  <span className="text-gray-700 font-medium">Fresh ingredients daily</span>
-                </div>
-                <div className="flex items-center space-x-3 text-sm">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-blue-600" />
-                  </div>
-                  <span className="text-gray-700 font-medium">Free delivery on orders</span>
-                </div>
-                <div className="flex items-center space-x-3 text-sm">
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Check className="w-4 h-4 text-purple-600" />
-                  </div>
-                  <span className="text-gray-700 font-medium">24/7 customer support</span>
-                </div>
-              </div>
-            </div> */}
           </div>
 
           {/* Right Hero Image */}

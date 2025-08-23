@@ -131,10 +131,10 @@ const Contact = () => {
               </h3>
               <p className="text-gray-700 mb-4">Connect With Us</p>
               
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-2">
                 {/* Facebook */}
                 <a href="https://www.facebook.com/share/16oUPtaFKG/" className="group" target="_blank" rel="noopener noreferrer">
-                  <div className="bg-white border-2 border-blue-500 rounded-lg p-4 text-center hover:bg-blue-50 transition-all duration-200 transform group-hover:scale-105">
+                  <div className="bg-white border-2 border-blue-500 rounded-lg p-3 text-center hover:bg-blue-50 transition-all duration-200 transform group-hover:scale-105">
                     <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-2">
                       <Facebook className="w-5 h-5 text-white font-bold" />
                     </div>
@@ -144,7 +144,7 @@ const Contact = () => {
 
                 {/* Instagram */}
                 <a href="https://www.instagram.com/mealversity.in?igsh=MWtwNHlsaGszemcyZA==" className="group"target="_blank" rel="noopener noreferrer">
-                  <div className="bg-white border-2 border-pink-500 rounded-lg p-4 text-center hover:bg-pink-50 transition-all duration-200 transform group-hover:scale-105">
+                  <div className="bg-white border-2 border-pink-500 rounded-lg p-3 text-center hover:bg-pink-50 transition-all duration-200 transform group-hover:scale-105">
                     <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-2">
                       <Instagram className="w-5 h-5 text-white" />
                     </div>
@@ -154,11 +154,11 @@ const Contact = () => {
 
                 {/* X (Twitter) */}
                 <a href="https://x.com/meal_versity?t=T62Io8NyKmQAro2tXf1EdQ&s=08" className="group" target="_blank" rel="noopener noreferrer">
-                  <div className="bg-white border-2 border-green-500 rounded-lg p-4 text-center hover:bg-green-50 transition-all duration-200 transform group-hover:scale-105">
+                  <div className="bg-white border-2 border-green-500 rounded-lg p-3 text-center hover:bg-green-50 transition-all duration-200 transform group-hover:scale-105">
                     <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-2">
                       <Twitter className="w-5 h-5 text-white" />
                     </div>
-                    <span className="text-sm font-medium text-gray-700">X (Twitter)</span>
+                    <span className="text-sm font-medium text-gray-700">Twitter</span>
                   </div>
                 </a>
               </div>

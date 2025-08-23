@@ -139,10 +139,10 @@ const AppLaunch = () => {
 
           {/* Countdown Timer */}
           <div className="relative mb-12 animate-fade-in-up" style={{ animationDelay: '800ms' }}>
-            <div className="flex justify-center space-x-4 md:space-x-8">
+            <div className="flex justify-center space-x-2 md:space-x-8">
               {Object.entries(countdown).map(([unit, value], index) => (
                 <div key={unit} className="text-center">
-                  <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200">
+                  <div className="bg-white rounded-xl p-2.5 shadow-lg border border-gray-200">
                     <div className="text-2xl md:text-3xl font-bold text-orange-600">{value}</div>
                     <div className="text-sm text-gray-600 capitalize">{unit}</div>
                   </div>
