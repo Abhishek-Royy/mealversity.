@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Check, Calendar, Clock, DollarSign, Users, Utensils, Star } from 'lucide-react'
+import { Check, Calendar, Clock, DollarSign, Users, Utensils, Star,IndianRupee } from 'lucide-react'
 
 const Meal = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -303,7 +303,7 @@ const Meal = () => {
                 {/* Price Section */}
                 <div className="bg-white/50 rounded-lg p-4 mb-6">
                   <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                    <DollarSign className="w-4 h-4 mr-2" />
+                    <IndianRupee className="w-4 h-4 mr-2" />
                     Pricing
                   </h4>
                   <div className="grid grid-cols-2 gap-4 text-sm">
