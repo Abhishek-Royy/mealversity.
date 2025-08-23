@@ -281,7 +281,7 @@ const Contact = () => {
                 className={`w-full py-3 px-6 rounded-lg font-semibold transform transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl ${
                   isLoading 
                     ? 'bg-gray-400 text-white cursor-not-allowed' 
-                    : 'bg-green-600 text-white hover:bg-green-700 hover:scale-105'
+                    : 'bg-gradient-to-r from-[#044735] to-[#0a7a5a]  hover:from-[#033a2c] hover:to-[#09664b] text-white  hover:scale-105'
                 }`}
               >
                 {isLoading ? (

@@ -96,7 +96,7 @@ const Navbar = () => {
             
             {/* Download Button */}
             
-            <a href="#app-launch"><button className="bg-gradient-to-r from-orange-600 to-yellow-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:from-orange-700 hover:to-yellow-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+            <a href="#app-launch"><button className="bg-gradient-to-r from-[#044735] to-[#0a7a5a]  hover:from-[#033a2c] hover:to-[#09664b] text-white px-6 py-2.5 rounded-full text-sm font-semibold  transform hover:scale-105 transition-all duration-200 shadow-lg">
               Download App
             </button></a>
           </div>
@@ -146,7 +146,7 @@ const Navbar = () => {
             {/* Mobile Download Button */}
             <div className="pt-4 pb-3">
               <a href="#app-launch">
-              <button className="w-full bg-gradient-to-r from-orange-600 to-yellow-600 text-white px-6 py-3 rounded-full text-base font-semibold hover:from-orange-700 hover:to-yellow-700 transition-all duration-200 shadow-lg">
+              <button className="w-full bg-gradient-to-r from-[#044735] to-[#0a7a5a]  hover:from-[#033a2c] hover:to-[#09664b] text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-200 shadow-lg">
                 Download App
               </button></a>
             </div>
