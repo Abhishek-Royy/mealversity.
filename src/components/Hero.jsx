@@ -1,8 +1,8 @@
 import React from "react";
 import { Check, Calendar, Clock, Star, ArrowRight } from "lucide-react";
 
-import ChatBot from "../ChatBot/ChatBot";
-import "../ChatBot/ChatBot.css";
+// import ChatBot from "../ChatBot/ChatBot";
+// import "../ChatBot/ChatBot.css";
 
 const Hero = () => {
   return (
@@ -62,7 +62,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <ChatBot />
+      {/* <ChatBot /> */}
     </section>
   );
 };

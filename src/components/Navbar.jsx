@@ -63,7 +63,7 @@ const Navbar = () => {
               <span className={`ml-3 text-xl lg:text-2xl font-bold transition-colors duration-300 ${
                 isScrolled ? 'text-gray-900' : 'text-gray-900'
               }`}  style={{ fontFamily: '"Playfair Display", serif' }}>
-                Mealversity
+                MealVersity
               </span>
             </div>
           </div>

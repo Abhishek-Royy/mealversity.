@@ -72,7 +72,7 @@ const Footer = () => {
                 className="text-2xl font-bold text-[#044735] mb-4"
                 style={{ fontFamily: '"Playfair Display", serif' }}
               >
-                Mealversity
+                MealVersity
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Fresh, healthy, and delicious meals delivered right to your
