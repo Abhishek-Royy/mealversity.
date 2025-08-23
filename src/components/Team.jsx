@@ -60,7 +60,7 @@ const TeamMember = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A365D] mb-6">
             Meet Our Team
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">

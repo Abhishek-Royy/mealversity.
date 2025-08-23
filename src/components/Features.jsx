@@ -17,7 +17,7 @@ const Features = () => {
                 <Users className="w-5 h-5" />
                 Who We Are
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A365D] leading-tight">
                 Not just another food delivery service
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
@@ -97,12 +97,12 @@ const Features = () => {
                 <Target className="w-5 h-5" />
                 Our Mission
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A365D] leading-tight">
                 To serve delicious, healthy, and affordable meals
               </h2>
               <div className="bg-gradient-to-r from-green-100 to-teal-100 rounded-2xl p-8 border border-green-200">
                 <p className="text-2xl text-gray-800 leading-relaxed font-semibold">
-                  That make life easier and happier – for <span className="font-bold text-blue-900">EVERYONE</span>.
+                  That make life easier and happier – for <span className="font-bold text-[#1A365D]">EVERYONE</span>.
                 </p>
               </div>
             </div>
@@ -118,7 +118,7 @@ const Features = () => {
                 <Heart className="w-5 h-5" />
                 Our Values
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
                 What drives us forward
               </h2>
               <div className="space-y-6">
@@ -170,7 +170,7 @@ const Features = () => {
               <Target className="w-5 h-5" />
               Common Food Challenges?
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A365D] mb-6">
               We understand your daily struggles with food
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -260,7 +260,7 @@ const Features = () => {
               <Award className="w-5 h-5" />
               Our Solutions
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A365D] mb-6">
               Comprehensive solutions to all your food challenges
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">

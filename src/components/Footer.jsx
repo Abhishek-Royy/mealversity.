@@ -1,42 +1,64 @@
-import React, { useState } from 'react'
-import { Facebook, Instagram, Twitter, Linkedin, Clock, Shield, Truck, Heart, Mail } from 'lucide-react'
+import React, { useState } from "react";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Clock,
+  Shield,
+  Truck,
+  Heart,
+  Mail,
+} from "lucide-react";
 
 const Footer = () => {
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState("");
 
   const handleSubscribe = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle subscription logic here
-    console.log('Subscribed:', email)
-    setEmail('')
-  }
+    console.log("Subscribed:", email);
+    setEmail("");
+  };
 
   const quickLinks = [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#features" },
     { name: "Meal Plans", href: "#meal-plans" },
-    { name: "Contact", href: "#contact" }
-  ]
+    { name: "Contact", href: "#contact" },
+  ];
 
   const services = [
     { name: "Daily Meal Plans", icon: Clock, color: "text-green-600" },
     { name: "Quality Assurance", icon: Shield, color: "text-orange-600" },
     { name: "Fast Delivery", icon: Truck, color: "text-orange-600" },
-    { name: "Healthy Options", icon: Heart, color: "text-green-600" }
-  ]
+    { name: "Healthy Options", icon: Heart, color: "text-green-600" },
+  ];
 
   const socialLinks = [
-    { name: "Facebook", href: "https://www.facebook.com/share/16oUPtaFKG/", icon: Facebook },
-    { name: "Twitter", href: "https://x.com/meal_versity?t=T62Io8NyKmQAro2tXf1EdQ&s=08", icon: Twitter },
-    { name: "Instagram", href: "https://www.instagram.com/mealversity.in?igsh=MWtwNHlsaGszemcyZA==", icon: Instagram },
-  ]
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/share/16oUPtaFKG/",
+      icon: Facebook,
+    },
+    {
+      name: "Twitter",
+      href: "https://x.com/meal_versity?t=T62Io8NyKmQAro2tXf1EdQ&s=08",
+      icon: Twitter,
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/mealversity.in?igsh=MWtwNHlsaGszemcyZA==",
+      icon: Instagram,
+    },
+  ];
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId.replace('#', ''))
+    const element = document.getElementById(sectionId.replace("#", ""));
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <footer id="footer" className="bg-gray-50">
@@ -44,16 +66,20 @@ const Footer = () => {
       <div className="bg-gradient-to-r from-orange-50 to-yellow-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            
             {/* Brand Information */}
             <div className="lg:col-span-1">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent mb-4">
+              <h3
+                className="text-2xl font-bold text-[#044735] mb-4"
+                style={{ fontFamily: '"Playfair Display", serif' }}
+              >
                 Mealversity
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                Fresh, healthy, and delicious meals delivered right to your doorstep. Your trusted partner for daily nutrition and convenience.
+                Fresh, healthy, and delicious meals delivered right to your
+                doorstep. Your trusted partner for daily nutrition and
+                convenience.
               </p>
-              
+
               {/* Social Media Icons */}
               <div className="flex space-x-3">
                 {socialLinks.map((social) => (
@@ -115,9 +141,10 @@ const Footer = () => {
                 Stay Updated
               </h4>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Subscribe to get special offers, free giveaways, and updates on new menu items!
+                Subscribe to get special offers, free giveaways, and updates on
+                new menu items!
               </p>
-              
+
               <form onSubmit={handleSubscribe} className="space-y-3">
                 <div className="relative">
                   <input
@@ -130,12 +157,13 @@ const Footer = () => {
                   />
                   <Mail className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
                 </div>
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-orange-600 to-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-orange-700 hover:to-yellow-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                >
-                  Subscribe Now
-                </button>
+               <button
+  type="submit"
+  className="w-full bg-gradient-to-r from-[#044735] to-[#0a7a5a] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#033a2c] hover:to-[#09664b] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+>
+  Subscribe Now
+</button>
+
               </form>
             </div>
           </div>
@@ -160,10 +188,16 @@ const Footer = () => {
 
             {/* Right - Legal Links */}
             <div className="flex space-x-6 text-white text-sm">
-              <a href="#" className="hover:text-orange-400 transition-colors duration-200">
+              <a
+                href="#"
+                className="hover:text-orange-400 transition-colors duration-200"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-orange-400 transition-colors duration-200">
+              <a
+                href="#"
+                className="hover:text-orange-400 transition-colors duration-200"
+              >
                 Terms of Service
               </a>
             </div>
@@ -171,7 +205,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

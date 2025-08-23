@@ -62,7 +62,7 @@ const Navbar = () => {
               />
               <span className={`ml-3 text-xl lg:text-2xl font-bold transition-colors duration-300 ${
                 isScrolled ? 'text-gray-900' : 'text-gray-900'
-              }`}>
+              }`}  style={{ fontFamily: '"Playfair Display", serif' }}>
                 Mealversity
               </span>
             </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 relative ${
+                className={`px-3 py-2 text-sm font-bold rounded-md transition-all duration-200 relative ${
                   activeSection === item.id
                     ? 'text-orange-600'
                     : isScrolled 

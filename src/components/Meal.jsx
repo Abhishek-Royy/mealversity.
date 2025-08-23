@@ -1,8 +1,13 @@
-import React, { useState } from 'react'
-import { Check, Calendar, Clock, DollarSign, Users, Utensils, Star,IndianRupee } from 'lucide-react'
+import React, { useState } from "react";
+import {
+  Users,
+  Utensils,
+  Star,
+  IndianRupee,
+} from "lucide-react";
 
 const Meal = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   const mealPlans = [
     // Lunch Category
@@ -13,12 +18,11 @@ const Meal = () => {
       code: "PL7MIX",
       details: "Weekly lunch (Veg + Non-Veg) - 7 meals",
       forWhom: "Office goers, Students needing variety",
-      makingPrice: "",
       sellingPrice: "",
       popular: true,
       color: "from-orange-400 to-yellow-400",
       bgColor: "bg-gradient-to-br from-orange-50 to-yellow-50",
-      borderColor: "border-orange-200"
+      borderColor: "border-orange-200",
     },
     {
       id: 2,
@@ -27,12 +31,11 @@ const Meal = () => {
       code: "GF7VEG",
       details: "Weekly vegetarian lunch - 7 meals",
       forWhom: "Pure veg lovers, Health-conscious",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-green-400 to-emerald-400",
       bgColor: "bg-gradient-to-br from-green-50 to-emerald-50",
-      borderColor: "border-green-200"
+      borderColor: "border-green-200",
     },
     {
       id: 3,
@@ -41,12 +44,11 @@ const Meal = () => {
       code: "PL28MIX",
       details: "Monthly lunch (Veg + Non-Veg) - 28 meals",
       forWhom: "Busy professionals, Families",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-blue-400 to-indigo-400",
       bgColor: "bg-gradient-to-br from-blue-50 to-indigo-50",
-      borderColor: "border-blue-200"
+      borderColor: "border-blue-200",
     },
     {
       id: 4,
@@ -55,12 +57,11 @@ const Meal = () => {
       code: "GF28VEG",
       details: "Monthly vegetarian lunch - 28 meals",
       forWhom: "Vegetarian families, Elderly",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-teal-400 to-cyan-400",
       bgColor: "bg-gradient-to-br from-teal-50 to-cyan-50",
-      borderColor: "border-teal-200"
+      borderColor: "border-teal-200",
     },
     // Dinner Category
     {
@@ -70,12 +71,11 @@ const Meal = () => {
       code: "EP7MIX",
       details: "Weekly dinner (Veg + Non-Veg) - 7 meals",
       forWhom: "Working individuals, Hostellers",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-purple-400 to-pink-400",
       bgColor: "bg-gradient-to-br from-purple-50 to-pink-50",
-      borderColor: "border-purple-200"
+      borderColor: "border-purple-200",
     },
     {
       id: 6,
@@ -84,12 +84,11 @@ const Meal = () => {
       code: "VN7VEG",
       details: "Weekly vegetarian dinner - 7 meals",
       forWhom: "Veg eaters, Diet-conscious",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-emerald-400 to-green-400",
       bgColor: "bg-gradient-to-br from-emerald-50 to-green-50",
-      borderColor: "border-emerald-200"
+      borderColor: "border-emerald-200",
     },
     {
       id: 7,
@@ -98,12 +97,11 @@ const Meal = () => {
       code: "EP28MIX",
       details: "Monthly dinner (Veg + Non-Veg) - 28 meals",
       forWhom: "Families, Professionals",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-indigo-400 to-purple-400",
       bgColor: "bg-gradient-to-br from-indigo-50 to-purple-50",
-      borderColor: "border-indigo-200"
+      borderColor: "border-indigo-200",
     },
     {
       id: 8,
@@ -112,12 +110,11 @@ const Meal = () => {
       code: "VN28VEG",
       details: "Monthly vegetarian dinner - 28 meals",
       forWhom: "Veg families, Seniors",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-cyan-400 to-blue-400",
       bgColor: "bg-gradient-to-br from-cyan-50 to-blue-50",
-      borderColor: "border-cyan-200"
+      borderColor: "border-cyan-200",
     },
     // Combo Category
     {
@@ -127,12 +124,11 @@ const Meal = () => {
       code: "ED14MIX",
       details: "Weekly lunch + dinner (Veg + Non-Veg) - 14 meals",
       forWhom: "Office goers, Couples",
-      makingPrice: "",
       sellingPrice: "",
       popular: true,
       color: "from-red-400 to-orange-400",
       bgColor: "bg-gradient-to-br from-red-50 to-orange-50",
-      borderColor: "border-red-200"
+      borderColor: "border-red-200",
     },
     {
       id: 10,
@@ -141,12 +137,11 @@ const Meal = () => {
       code: "SD14MIX",
       details: "Premium weekly lunch + dinner (Veg + Non-Veg) - 14 meals",
       forWhom: "Foodies, Premium customers",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-pink-400 to-rose-400",
       bgColor: "bg-gradient-to-br from-pink-50 to-rose-50",
-      borderColor: "border-pink-200"
+      borderColor: "border-pink-200",
     },
     {
       id: 11,
@@ -155,12 +150,11 @@ const Meal = () => {
       code: "ED14VEG",
       details: "Weekly lunch + dinner (Veg) - 14 meals",
       forWhom: "Veg couples, Health-conscious",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-lime-400 to-green-400",
       bgColor: "bg-gradient-to-br from-lime-50 to-green-50",
-      borderColor: "border-lime-200"
+      borderColor: "border-lime-200",
     },
     {
       id: 12,
@@ -169,12 +163,11 @@ const Meal = () => {
       code: "ED56MIX",
       details: "Monthly lunch + dinner (Veg + Non-Veg) - 56 meals",
       forWhom: "Families, Busy households",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-amber-400 to-orange-400",
       bgColor: "bg-gradient-to-br from-amber-50 to-orange-50",
-      borderColor: "border-amber-200"
+      borderColor: "border-amber-200",
     },
     {
       id: 13,
@@ -183,12 +176,11 @@ const Meal = () => {
       code: "SD56MIX",
       details: "Premium monthly lunch + dinner (Veg + Non-Veg) - 56 meals",
       forWhom: "Luxury lifestyle customers",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-violet-400 to-purple-400",
       bgColor: "bg-gradient-to-br from-violet-50 to-purple-50",
-      borderColor: "border-violet-200"
+      borderColor: "border-violet-200",
     },
     {
       id: 14,
@@ -197,31 +189,37 @@ const Meal = () => {
       code: "ED56VEG",
       details: "Monthly lunch + dinner (Veg) - 56 meals",
       forWhom: "Vegetarian families, Wellness seekers",
-      makingPrice: "",
       sellingPrice: "",
       popular: false,
       color: "from-sky-400 to-blue-400",
       bgColor: "bg-gradient-to-br from-sky-50 to-blue-50",
-      borderColor: "border-sky-200"
-    }
-  ]
+      borderColor: "border-sky-200",
+    },
+  ];
 
-  const filteredPlans = selectedCategory === 'all' 
-    ? mealPlans 
-    : mealPlans.filter(plan => plan.category === selectedCategory)
+  const filteredPlans =
+    selectedCategory === "all"
+      ? mealPlans
+      : mealPlans.filter((plan) => plan.category === selectedCategory);
 
-  const categories = ['all', 'Lunch', 'Dinner', 'Combo']
+  const categories = ["all", "Lunch", "Dinner", "Combo"];
 
   return (
-    <section id="meal-plans" className="py-20" style={{ backgroundColor: '#FFF5D5' }}>
+    <section
+      id="meal-plans"
+      className="py-20"
+      style={{ backgroundColor: "#FFF5D5" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A365D] mb-6">
             Meal Plans
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Choose from our comprehensive range of meal plans designed for every lifestyle and preference. From weekly to monthly plans, we have something for everyone.
+            Choose from our comprehensive range of meal plans designed for every
+            lifestyle and preference. From weekly to monthly plans, we have
+            something for everyone.
           </p>
         </div>
 
@@ -234,11 +232,11 @@ const Meal = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-gradient-to-r from-orange-500 to-yellow-500 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                    ? "bg-gradient-to-r from-orange-500 to-yellow-500 text-white shadow-lg"
+                    : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
                 }`}
               >
-                {category === 'all' ? 'All Plans' : category}
+                {category === "all" ? "All Plans" : category}
               </button>
             ))}
           </div>
@@ -266,7 +264,9 @@ const Meal = () => {
 
                 {/* Category Badge */}
                 <div className="absolute top-4 right-4">
-                  <div className={`bg-gradient-to-r ${plan.color} text-white px-3 py-1 rounded-full text-xs font-semibold`}>
+                  <div
+                    className={`bg-gradient-to-r ${plan.color} text-white px-3 py-1 rounded-full text-xs font-semibold`}
+                  >
                     {plan.category}
                   </div>
                 </div>
@@ -277,7 +277,9 @@ const Meal = () => {
                     {plan.planName}
                   </h3>
                   <div className="bg-white/50 rounded-lg p-3 mb-4">
-                    <p className="text-sm font-mono text-gray-600">Code: {plan.code}</p>
+                    <p className="text-sm font-mono text-gray-600">
+                      Code: {plan.code}
+                    </p>
                   </div>
                 </div>
 
@@ -290,7 +292,7 @@ const Meal = () => {
                     </h4>
                     <p className="text-sm text-gray-700">{plan.details}</p>
                   </div>
-                  
+
                   <div className="bg-white/50 rounded-lg p-4">
                     <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
                       <Users className="w-4 h-4 mr-2" />
@@ -302,30 +304,41 @@ const Meal = () => {
 
                 {/* Price Section */}
                 <div className="bg-white/50 rounded-lg p-4 mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                    <IndianRupee className="w-4 h-4 mr-2" />
-                    Pricing
-                  </h4>
+                  <div className="flex gap-2">
+                    <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
+                      <IndianRupee className="w-4 h-4 mr-2" />
+                      Price:
+                    </h4>
+                    <p className="font-medium text-gray-900">
+                      {" "}
+                      {plan.sellingPrice || " Coming Soon"}
+                    </p>
+                  </div>
                   <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div>
+                    {/* <div>
                       <p className="text-gray-600">Making Price:</p>
                       <p className="font-semibold text-gray-900">{plan.makingPrice || 'Coming Soon'}</p>
-                    </div>
-                    <div>
-                      <p className="text-gray-600">Selling Price:</p>
+                    </div> */}
+                    {/* <div >
+                      <p className="text-gray-600">Price:</p>
                       <p className="font-semibold text-gray-900">{plan.sellingPrice || 'Coming Soon'}</p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
                 {/* CTA Button */}
-                <button className={`w-full bg-gradient-to-r ${plan.color} text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 group-hover:shadow-xl`}>
+                <button
+                  className={`w-full bg-gradient-to-r ${plan.color} text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 group-hover:shadow-xl`}
+                >
                   Choose Plan
                 </button>
 
                 {/* Decorative Elements */}
                 <div className="absolute top-4 left-4 w-6 h-6 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 right-4 w-4 h-4 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ transitionDelay: '0.1s' }}></div>
+                <div
+                  className="absolute bottom-4 right-4 w-4 h-4 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ transitionDelay: "0.1s" }}
+                ></div>
               </div>
             ))}
           </div>
@@ -351,7 +364,9 @@ const Meal = () => {
 
                   {/* Category Badge */}
                   <div className="absolute top-4 right-4">
-                    <div className={`bg-gradient-to-r ${plan.color} text-white px-3 py-1 rounded-full text-xs font-semibold`}>
+                    <div
+                      className={`bg-gradient-to-r ${plan.color} text-white px-3 py-1 rounded-full text-xs font-semibold`}
+                    >
                       {plan.category}
                     </div>
                   </div>
@@ -362,7 +377,9 @@ const Meal = () => {
                       {plan.planName}
                     </h3>
                     <div className="bg-white/50 rounded-lg p-3 mb-4">
-                      <p className="text-sm font-mono text-gray-600">Code: {plan.code}</p>
+                      <p className="text-sm font-mono text-gray-600">
+                        Code: {plan.code}
+                      </p>
                     </div>
                   </div>
 
@@ -375,7 +392,7 @@ const Meal = () => {
                       </h4>
                       <p className="text-sm text-gray-700">{plan.details}</p>
                     </div>
-                    
+
                     <div className="bg-white/50 rounded-lg p-4">
                       <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
                         <Users className="w-4 h-4 mr-2" />
@@ -387,11 +404,17 @@ const Meal = () => {
 
                   {/* Price Section */}
                   <div className="bg-white/50 rounded-lg p-4 mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                      <DollarSign className="w-4 h-4 mr-2" />
-                      Pricing
-                    </h4>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="flex gap-2">
+                      <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
+                        <IndianRupee className="w-4 h-4 mr-2" />
+                        Price:{" "}
+                      </h4>
+                      <p className="font-medium text-gray-900">
+                        {" "}
+                        {plan.sellingPrice || " Coming Soon"}
+                      </p>
+                    </div>
+                    {/* <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
                         <p className="text-gray-600">Making Price:</p>
                         <p className="font-semibold text-gray-900">{plan.makingPrice || 'Coming Soon'}</p>
@@ -400,11 +423,13 @@ const Meal = () => {
                         <p className="text-gray-600">Selling Price:</p>
                         <p className="font-semibold text-gray-900">{plan.sellingPrice || 'Coming Soon'}</p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* CTA Button */}
-                  <button className={`w-full bg-gradient-to-r ${plan.color} text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
+                  <button
+                    className={`w-full bg-gradient-to-r ${plan.color} text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300`}
+                  >
                     Choose Plan
                   </button>
 
@@ -414,7 +439,7 @@ const Meal = () => {
                 </div>
               ))}
             </div>
-            
+
             {/* Scroll Indicator */}
             <div className="flex justify-center mt-6 space-x-2">
               {filteredPlans.map((_, index) => (
@@ -426,49 +451,9 @@ const Meal = () => {
             </div>
           </div>
         </div>
-
-        {/* Additional Info */}
-        <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-100 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Why Choose Our Meal Plans?
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-                  <Calendar className="w-5 h-5 text-orange-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Flexible Plans</h4>
-                  <p className="text-sm text-gray-600">Weekly to monthly options</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-green-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Fresh & Healthy</h4>
-                  <p className="text-sm text-gray-600">Made with fresh ingredients</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-                  <Users className="w-5 h-5 text-blue-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">For Everyone</h4>
-                  <p className="text-sm text-gray-600">Veg & non-veg options</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Meal
+export default Meal;

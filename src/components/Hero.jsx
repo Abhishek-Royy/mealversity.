@@ -4,20 +4,12 @@ import { Check, Calendar, Clock, Star, ArrowRight } from 'lucide-react'
 const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden pt-20" style={{ backgroundColor: '#FFF5D5' }}>
-      {/* Enhanced Background decoration */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-yellow-200 to-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-tr from-amber-200 to-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-4000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-pink-200/20 to-purple-200/20 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-6000"></div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-left space-y-8">
             {/* Launch Date Announcement */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 shadow-2xl border border-blue-200/20 backdrop-blur-sm">
+            {/* <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 shadow-2xl border border-blue-200/20 backdrop-blur-sm">
               <div className="flex items-center gap-3 mb-3">
                 <Calendar className="w-6 h-6 text-white" />
                 <span className="text-white font-semibold text-lg">Launch Announcement</span>
@@ -29,10 +21,10 @@ const Hero = () => {
                 <Clock className="w-4 h-4 text-white/70" />
                 <span className="text-white/70 text-sm">Get ready for a revolutionary food experience!</span>
               </div>
-            </div>
+            </div> */}
 
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
+              <h1 className="text-4xl md:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
                 Fresh, Healthy & Affordable 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-600"> Meals for Everyone</span>
               </h1>
@@ -55,7 +47,7 @@ const Hero = () => {
             </div>
 
             {/* Enhanced Trust indicators */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
+            {/* <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-white/20">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                 <Star className="w-5 h-5 text-orange-500" />
                 Why Choose MealVersity?
@@ -80,7 +72,7 @@ const Hero = () => {
                   <span className="text-gray-700 font-medium">24/7 customer support</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Hero Image */}
@@ -89,7 +81,7 @@ const Hero = () => {
               {/* Main image container */}
               <div className="relative">
                 {/* Image container */}
-                <div className="relative rounded-3xl p-4 sm:p-6 lg:p-8">
+                <div className="relative rounded-3xl  sm:p-6 lg:p-8">
                   {/* Hero Image */}
                   <div className="relative overflow-hidden rounded-2xl">
                     <img 
@@ -102,10 +94,7 @@ const Hero = () => {
                 </div>
               </div>
               
-              {/* Bottom caption */}
-              <div className="text-center mt-6">
-                <p className="text-lg text-gray-700 font-semibold">Delicious meals, happy people</p>
-              </div>
+            
             </div>
           </div>
         </div>
