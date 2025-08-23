@@ -4,12 +4,26 @@ import { Menu, X } from 'lucide-react'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState('hero')
 
-  // Handle scroll effect
+  // Handle scroll effect and active section detection
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
+      
+      // Detect active section
+      const sections = ['hero', 'features', 'meal-plans', 'contact']
+      const scrollPosition = window.scrollY + 100 // Offset for navbar height
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i])
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i])
+          break
+        }
+      }
     }
+    
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -26,7 +40,7 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', id: 'hero' },
     { name: 'About', id: 'features' },
-    { name: 'Meal Plan', id: 'how-it-works' },
+    { name: 'Meal Plan', id: 'meal-plans' },
     { name: 'Contact', id: 'contact' }
   ]
 
@@ -60,11 +74,23 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:text-orange-600 ${
-                  isScrolled ? 'text-gray-700 hover:text-orange-600' : 'text-gray-700 hover:text-orange-600'
+                className={`px-3 py-2 text-sm font-medium rounded-md transition-all duration-200 relative ${
+                  activeSection === item.id
+                    ? 'text-orange-600'
+                    : isScrolled 
+                      ? 'text-gray-700 hover:text-orange-600' 
+                      : 'text-gray-700 hover:text-orange-600'
                 }`}
               >
                 {item.name}
+                {/* Active underline */}
+                {activeSection === item.id && (
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-600 rounded-full transform scale-x-100 transition-transform duration-300"></div>
+                )}
+                {/* Hover underline */}
+                <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-orange-600 rounded-full transform transition-transform duration-300 ${
+                  activeSection === item.id ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`}></div>
               </button>
             ))}
             
@@ -103,9 +129,17 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-md transition-colors duration-200"
+                className={`block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-all duration-200 relative ${
+                  activeSection === item.id
+                    ? 'text-orange-600 bg-orange-50'
+                    : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
+                }`}
               >
                 {item.name}
+                {/* Active indicator for mobile */}
+                {activeSection === item.id && (
+                  <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1 h-6 bg-orange-600 rounded-r-full"></div>
+                )}
               </button>
             ))}
             

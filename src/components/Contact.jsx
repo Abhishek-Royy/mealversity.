@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Send, User, MessageSquare } from 'lucide-react'
+import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Send, User, MessageSquare, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,25 +9,56 @@ const Contact = () => {
     message: ''
   })
 
+  const [isLoading, setIsLoading] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null) // 'success', 'error', null
+
   const handleInputChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
     }))
+    // Clear status when user starts typing
+    if (submitStatus) {
+      setSubmitStatus(null)
+    }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    })
+    setIsLoading(true)
+    setSubmitStatus(null)
+
+    try {
+      const response = await fetch('https://tarikhbackend.technorapide.com/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+
+      if (response.ok) {
+        const result = await response.json()
+        setSubmitStatus('success')
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        })
+      } else {
+        const errorData = await response.json()
+        console.error('API Error:', errorData)
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Network Error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -102,7 +133,7 @@ const Contact = () => {
               
               <div className="grid grid-cols-3 gap-4">
                 {/* Facebook */}
-                <a href="#" className="group">
+                <a href="https://www.facebook.com/share/16oUPtaFKG/" className="group" target="_blank" rel="noopener noreferrer">
                   <div className="bg-white border-2 border-blue-500 rounded-lg p-4 text-center hover:bg-blue-50 transition-all duration-200 transform group-hover:scale-105">
                     <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-2">
                       <Facebook className="w-5 h-5 text-white font-bold" />
@@ -112,7 +143,7 @@ const Contact = () => {
                 </a>
 
                 {/* Instagram */}
-                <a href="#" className="group">
+                <a href="https://www.instagram.com/mealversity.in?igsh=MWtwNHlsaGszemcyZA==" className="group"target="_blank" rel="noopener noreferrer">
                   <div className="bg-white border-2 border-pink-500 rounded-lg p-4 text-center hover:bg-pink-50 transition-all duration-200 transform group-hover:scale-105">
                     <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-2">
                       <Instagram className="w-5 h-5 text-white" />
@@ -122,7 +153,7 @@ const Contact = () => {
                 </a>
 
                 {/* X (Twitter) */}
-                <a href="#" className="group">
+                <a href="https://x.com/meal_versity?t=T62Io8NyKmQAro2tXf1EdQ&s=08" className="group" target="_blank" rel="noopener noreferrer">
                   <div className="bg-white border-2 border-green-500 rounded-lg p-4 text-center hover:bg-green-50 transition-all duration-200 transform group-hover:scale-105">
                     <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-2">
                       <Twitter className="w-5 h-5 text-white" />
@@ -141,6 +172,27 @@ const Contact = () => {
               <div className="absolute bottom-0 left-0 w-16 h-1 bg-green-500 rounded-full"></div>
             </h3>
 
+            {/* Status Messages */}
+            {submitStatus === 'success' && (
+              <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                <div>
+                  <p className="text-green-800 font-medium">Message sent successfully!</p>
+                  <p className="text-green-600 text-sm">We'll get back to you soon.</p>
+                </div>
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4 flex items-center space-x-3">
+                <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                <div>
+                  <p className="text-red-800 font-medium">Failed to send message</p>
+                  <p className="text-red-600 text-sm">Please try again later or contact us directly.</p>
+                </div>
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
               <div>
@@ -158,6 +210,7 @@ const Contact = () => {
                   placeholder="Your full name"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
                   required
+                  disabled={isLoading}
                 />
               </div>
 
@@ -177,6 +230,7 @@ const Contact = () => {
                   placeholder="Your email address"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
                   required
+                  disabled={isLoading}
                 />
               </div>
 
@@ -196,6 +250,7 @@ const Contact = () => {
                   placeholder="Your phone number"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
                   required
+                  disabled={isLoading}
                 />
               </div>
 
@@ -215,16 +270,31 @@ const Contact = () => {
                   rows="4"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 resize-none"
                   required
+                  disabled={isLoading}
                 ></textarea>
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transform hover:scale-105 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+                disabled={isLoading}
+                className={`w-full py-3 px-6 rounded-lg font-semibold transform transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl ${
+                  isLoading 
+                    ? 'bg-gray-400 text-white cursor-not-allowed' 
+                    : 'bg-green-600 text-white hover:bg-green-700 hover:scale-105'
+                }`}
               >
-                <span>Send Message</span>
-                <Send className="w-5 h-5 text-white" />
+                {isLoading ? (
+                  <>
+                    <Loader2 className="w-5 h-5 text-white animate-spin" />
+                    <span>Sending...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Send Message</span>
+                    <Send className="w-5 h-5 text-white" />
+                  </>
+                )}
               </button>
             </form>
           </div>

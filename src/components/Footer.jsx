@@ -12,37 +12,42 @@ const Footer = () => {
   }
 
   const quickLinks = [
-    { name: "Menu", href: "#" },
-    { name: "Pricing", href: "#" },
-    { name: "About Us", href: "#" },
-    { name: "FAQ", href: "#" },
-    { name: "Contact", href: "#" }
+    { name: "Home", href: "#hero" },
+    { name: "About", href: "#features" },
+    { name: "Meal Plans", href: "#meal-plans" },
+    { name: "Contact", href: "#contact" }
   ]
 
   const services = [
-    { name: "Daily Meal Plans", icon: Clock, color: "text-teal-600" },
+    { name: "Daily Meal Plans", icon: Clock, color: "text-green-600" },
     { name: "Quality Assurance", icon: Shield, color: "text-orange-600" },
     { name: "Fast Delivery", icon: Truck, color: "text-orange-600" },
-    { name: "Healthy Options", icon: Heart, color: "text-orange-600" }
+    { name: "Healthy Options", icon: Heart, color: "text-green-600" }
   ]
 
   const socialLinks = [
-    { name: "Facebook", href: "#", icon: Facebook },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "Instagram", href: "#", icon: Instagram },
-    { name: "LinkedIn", href: "#", icon: Linkedin }
+    { name: "Facebook", href: "https://www.facebook.com/share/16oUPtaFKG/", icon: Facebook },
+    { name: "Twitter", href: "https://x.com/meal_versity?t=T62Io8NyKmQAro2tXf1EdQ&s=08", icon: Twitter },
+    { name: "Instagram", href: "https://www.instagram.com/mealversity.in?igsh=MWtwNHlsaGszemcyZA==", icon: Instagram },
   ]
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId.replace('#', ''))
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <footer id="footer" className="bg-gray-50">
       {/* Upper Section */}
-      <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-16">
+      <div className="bg-gradient-to-r from-orange-50 to-yellow-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             
             {/* Brand Information */}
             <div className="lg:col-span-1">
-              <h3 className="text-2xl font-bold text-teal-600 mb-4">
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent mb-4">
                 Mealversity
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
@@ -55,7 +60,9 @@ const Footer = () => {
                   <a
                     key={social.name}
                     href={social.href}
-                    className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-teal-500 hover:text-white transition-all duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-white border-2 border-orange-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all duration-300 shadow-md hover:shadow-lg"
                   >
                     <social.icon className="w-5 h-5" />
                   </a>
@@ -65,19 +72,19 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="lg:col-span-1">
-              <h4 className="text-lg font-bold text-teal-600 mb-4">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">
                 Quick Links
               </h4>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="flex items-center text-gray-600 hover:text-teal-600 transition-colors duration-200 group"
+                    <button
+                      onClick={() => scrollToSection(link.href)}
+                      className="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200 group w-full text-left"
                     >
-                      <div className="w-2 h-2 bg-teal-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-200"></div>
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-200"></div>
                       {link.name}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -85,14 +92,14 @@ const Footer = () => {
 
             {/* Our Services */}
             <div className="lg:col-span-1">
-              <h4 className="text-lg font-bold text-orange-600 mb-4">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">
                 Our Services
               </h4>
               <ul className="space-y-3">
                 {services.map((service) => (
                   <li key={service.name}>
                     <div className="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200 group">
-                      <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-100 transition-colors duration-200">
+                      <div className="w-8 h-8 bg-white border-2 border-orange-200 rounded-lg flex items-center justify-center mr-3 group-hover:bg-orange-100 group-hover:border-orange-300 transition-colors duration-200 shadow-sm">
                         <service.icon className={`w-4 h-4 ${service.color}`} />
                       </div>
                       <span className="text-sm">{service.name}</span>
@@ -104,7 +111,7 @@ const Footer = () => {
 
             {/* Stay Updated */}
             <div className="lg:col-span-1">
-              <h4 className="text-lg font-bold text-orange-600 mb-4">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">
                 Stay Updated
               </h4>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
@@ -118,14 +125,14 @@ const Footer = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
-                    className="w-full px-4 py-3 bg-gray-200 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent pr-12"
+                    className="w-full px-4 py-3 bg-white border-2 border-orange-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 pr-12 shadow-sm"
                     required
                   />
                   <Mail className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transform hover:scale-105 transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-orange-600 to-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-orange-700 hover:to-yellow-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Subscribe Now
                 </button>
@@ -136,13 +143,13 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-gray-800 py-6">
+      <div className="bg-gradient-to-r from-gray-800 to-gray-900 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Left - Made with love */}
             <div className="flex items-center space-x-2 text-white text-sm">
               <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500 fill-current" />
+              <Heart className="w-4 h-4 text-orange-500 fill-current" />
               <span>by TechnoRapide</span>
             </div>
 
@@ -153,10 +160,10 @@ const Footer = () => {
 
             {/* Right - Legal Links */}
             <div className="flex space-x-6 text-white text-sm">
-              <a href="#" className="hover:text-teal-400 transition-colors duration-200">
+              <a href="#" className="hover:text-orange-400 transition-colors duration-200">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-teal-400 transition-colors duration-200">
+              <a href="#" className="hover:text-orange-400 transition-colors duration-200">
                 Terms of Service
               </a>
             </div>

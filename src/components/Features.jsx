@@ -1,174 +1,31 @@
 import React from 'react'
-import { Users, Target, Heart, Shield, Star, Zap, Check, Truck, CreditCard } from 'lucide-react'
+import { Users, Target, Heart, Shield, Star, Zap, Check, Truck, CreditCard, Sparkles, Award, Clock, DollarSign } from 'lucide-react'
 
 const Features = () => {
   return (
-    <section id="features" className="pb-20 pt-30" style={{ backgroundColor: '#FFF5D5' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Introduction Box */}
-        <div className="mb-20">
-          <div className="bg-gradient-to-r from-yellow-100 to-orange-100 rounded-3xl p-8 md:p-12 border-2 border-dashed border-teal-400 shadow-2xl transform hover:scale-105 transition-all duration-500">
-            <div className="text-center">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6 font-serif">
-                MEALVERSITY
-              </h1>
-              <p className="text-lg md:text-xl lg:text-2xl text-blue-900 leading-relaxed max-w-4xl mx-auto font-serif">
-                MEALVERSITY GIVES YOU FRESH, SIMPLE, TASTY, AND HEALTHY MEALS EVERY SINGLE DAY—WITHOUT THE MESS. WHETHER YOU'RE A STUDENT, INTERN, OR OFFICE-GOER, YOU'LL LOVE OUR SERVICE.
-              </p>
-            </div>
-          </div>
-        </div>
+    <section id="features" className="relative overflow-hidden pt-20 pb-1 lg:pt-32 lg:pb-2" style={{ backgroundColor: '#FFF5D5' }}>
 
-        {/* Key Features Grid - 2x2 Layout */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-              Common Food Challenges?
-            </h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              We understand your daily struggles with food. Here's how we solve them:
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
-            {/* Question Box 1 */}
-            <div className="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-2xl p-6 border-2 border-teal-400 shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
-              <div className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="flex-1">
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                    🍔
-                  </div>
-                  <p className="text-lg font-semibold text-gray-800">
-                    Eating oily restaurant food every day?
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            {/* Question Box 2 */}
-            <div className="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-2xl p-6 border-2 border-teal-400 shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
-              <div className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="flex-1">
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                    🎈
-                  </div>
-                  <p className="text-lg font-semibold text-gray-800">
-                    Mess food that's either late or tasteless?
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            {/* Question Box 3 */}
-            <div className="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-2xl p-6 border-2 border-teal-400 shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
-              <div className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="flex-1">
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                    ⏰
-                  </div>
-                  <p className="text-lg font-semibold text-gray-800">
-                    No time to cook during classes or work?
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Question Box 4 */}
-            <div className="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-2xl p-6 border-2 border-teal-400 shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
-              <div className="flex items-start space-x-4">
-                <div className="w-3 h-3 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="flex-1">
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                    💰
-                  </div>
-                  <p className="text-lg font-semibold text-gray-800">
-                    Spending ₹5000-₹7000/month on unhealthy food?
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Solution Features Grid */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-              Our Solutions
-            </h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              We provide comprehensive solutions to all your food challenges
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {/* Feature 1 */}
-            <div className="bg-gradient-to-br from-teal-100 to-mint-100 rounded-2xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Check className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Home-style meals made by trusted local kitchens
-                </h3>
-              </div>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="bg-gradient-to-br from-orange-100 to-peach-100 rounded-2xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Truck className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  On-time delivery by verified delivery agents
-                </h3>
-              </div>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="bg-gradient-to-br from-yellow-100 to-gold-100 rounded-2xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <CreditCard className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Affordable weekly & monthly plans
-                </h3>
-              </div>
-            </div>
-
-            {/* Feature 4 */}
-            <div className="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-2xl p-6 shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Flexible payment via UPI, Wallet, or Cash
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Who We Are Section */}
-        <div className="mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
-            <div className="space-y-6 animate-fade-in-left">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+            <div className="space-y-8 animate-fade-in-left">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full text-lg font-semibold mb-6 shadow-lg">
+                <Users className="w-5 h-5" />
                 Who We Are
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
+                Not just another food delivery service
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                MealVersity is not just another food delivery service - it's a movement against boring food and kitchen stress. We run our own professional kitchen, where freshness, hygiene, and taste come first.
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                MealVersity is a movement against boring food and kitchen stress. We run our own professional kitchen, where freshness, hygiene, and taste come first.
               </p>
-              <div className="space-y-4">
-                <p className="text-lg text-gray-700 font-medium">Whether you're:</p>
-                <ul className="space-y-3">
+              <div className="space-y-6">
+                <p className="text-xl text-gray-700 font-semibold">Whether you're:</p>
+                <ul className="space-y-4">
                   {[
                     "A family tired of daily cooking stress",
                     "A student surviving on instant noodles",
@@ -176,251 +33,330 @@ const Features = () => {
                     "A professional too busy to even think about cooking",
                     "Or a migrant worker missing home-style food"
                   ].map((item, index) => (
-                    <li key={index} className="flex items-start space-x-3 animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0 animate-pulse"></div>
-                      <span className="text-gray-700">{item}</span>
+                    <li key={index} className="flex items-start space-x-4 animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
+                      <div className="w-3 h-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mt-2 flex-shrink-0 shadow-lg animate-pulse"></div>
+                      <span className="text-lg text-gray-700 font-medium">{item}</span>
                     </li>
                   ))}
                 </ul>
-                <p className="text-lg text-gray-700 font-semibold mt-4">
-                  We've got a meal plan for you.
-                </p>
+                <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-2xl p-6 border border-orange-200">
+                  <p className="text-xl text-gray-800 font-bold text-center">
+                    We've got a meal plan for you.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Right Illustration */}
             <div className="relative flex justify-center lg:justify-end animate-fade-in-right">
-              <div className="relative w-full max-w-md lg:max-w-lg">
-                <div className="bg-white rounded-3xl p-8 shadow-2xl border border-orange-100 hover:shadow-3xl transition-all duration-500 transform hover:scale-105">
-                  {/* Table with people */}
-                  <div className="relative">
-                    {/* Table */}
-                    <div className="w-full h-24 bg-gradient-to-r from-amber-200 to-orange-200 rounded-lg mb-4 relative animate-pulse">
-                      {/* Food items on table */}
-                      <div className="absolute top-2 left-4 w-8 h-8 bg-white rounded-full shadow-md animate-bounce"></div>
-                      <div className="absolute top-2 right-4 w-6 h-6 bg-orange-300 rounded-full shadow-md animate-bounce" style={{ animationDelay: '0.5s' }}></div>
-                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-10 h-3 bg-green-300 rounded-full shadow-md animate-bounce" style={{ animationDelay: '1s' }}></div>
-                    </div>
-                    
-                    {/* People sitting around table */}
-                    <div className="grid grid-cols-4 gap-2">
-                      {/* Person 1 - Female with reddish-orange hair */}
-                      <div className="text-center animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-                        <div className="w-12 h-12 bg-orange-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-8 h-8 bg-orange-400 rounded-full"></div>
-                        </div>
-                        <div className="w-3 h-4 bg-yellow-300 rounded-full mx-auto mb-1"></div>
-                        <div className="w-4 h-2 bg-orange-600 rounded-full mx-auto"></div>
-                      </div>
-                      
-                      {/* Person 2 - Male with dark hair */}
-                      <div className="text-center animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-                        <div className="w-12 h-12 bg-blue-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-8 h-8 bg-blue-400 rounded-full"></div>
-                        </div>
-                        <div className="w-3 h-4 bg-blue-300 rounded-full mx-auto mb-1"></div>
-                        <div className="w-4 h-2 bg-gray-700 rounded-full mx-auto"></div>
-                      </div>
-                      
-                      {/* Person 3 - Male with curly hair */}
-                      <div className="text-center animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-                        <div className="w-12 h-12 bg-orange-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-8 h-8 bg-orange-400 rounded-full"></div>
-                        </div>
-                        <div className="w-3 h-4 bg-orange-400 rounded-full mx-auto mb-1"></div>
-                        <div className="w-4 h-2 bg-amber-600 rounded-full mx-auto"></div>
-                      </div>
-                      
-                      {/* Person 4 - Female with long dark hair */}
-                      <div className="text-center animate-fade-in-up" style={{ animationDelay: '800ms' }}>
-                        <div className="w-12 h-12 bg-amber-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-8 h-8 bg-amber-400 rounded-full"></div>
-                        </div>
-                        <div className="w-3 h-4 bg-amber-200 rounded-full mx-auto mb-1"></div>
-                        <div className="w-4 h-2 bg-blue-500 rounded-full mx-auto"></div>
-                      </div>
-                    </div>
-                    
-                    {/* Small decorative elements */}
-                    <div className="absolute -top-2 -right-2 w-4 h-4 bg-gray-800 rounded-full opacity-60 animate-ping"></div>
-                    <div className="absolute -top-4 -left-2 w-3 h-3 bg-gray-800 rounded-full opacity-60 animate-ping" style={{ animationDelay: '1s' }}></div>
-                    <div className="absolute -bottom-2 -right-4 w-2 h-2 bg-gray-800 rounded-full opacity-60 animate-ping" style={{ animationDelay: '2s' }}></div>
+              <div className="relative w-full max-w-lg">
+                <div className="relative">
+                  {/* Who We Are Image */}
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <img 
+                      src="/whoweare1.png" 
+                      alt="Who We Are - MealVersity team and community" 
+                      className="w-full h-auto object-cover rounded-2xl"
+                      loading="lazy"
+                    />
                   </div>
                   
                   {/* Bottom text */}
-                  <div className="text-center mt-4">
-                    <p className="text-sm text-gray-600 font-medium">Delicious meals, happy people</p>
+                  <div className="text-center mt-6">
+                    <p className="text-lg text-gray-700 font-semibold">Delicious meals, happy people</p>
                   </div>
                 </div>
-                
-                {/* Floating elements */}
-                <div className="absolute -top-4 -left-4 w-16 h-16 bg-orange-200 rounded-full opacity-60 animate-pulse"></div>
-                <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-yellow-200 rounded-full opacity-60 animate-pulse animation-delay-2000"></div>
               </div>
             </div>
           </div>
         </div>
 
         {/* Our Mission Section */}
-        <div className="mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Illustration */}
+        <div className="mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        {/* Left Illustration */}
             <div className="relative flex justify-center lg:justify-start order-2 lg:order-1 animate-fade-in-left">
-              <div className="relative w-full max-w-md lg:max-w-lg">
-                <div className="bg-white rounded-3xl p-8 shadow-2xl border border-blue-100 hover:shadow-3xl transition-all duration-500 transform hover:scale-105">
-                  {/* Three people behind computer */}
-                  <div className="relative">
-                    {/* Computer monitor */}
-                    <div className="w-32 h-20 bg-blue-900 rounded-lg mx-auto mb-6 relative animate-pulse">
-                      <div className="absolute inset-2 bg-blue-700 rounded"></div>
-                      <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-blue-300 rounded-full animate-ping"></div>
-                    </div>
-                    
-                    {/* People */}
-                    <div className="flex justify-center items-end space-x-4">
-                      {/* Person 1 - Man with beard */}
-                      <div className="text-center animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-                        <div className="w-12 h-12 bg-blue-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-8 h-8 bg-blue-400 rounded-full"></div>
-                        </div>
-                        <div className="w-3 h-4 bg-blue-200 rounded-full mx-auto mb-1"></div>
-                        <div className="w-4 h-2 bg-blue-600 rounded-full mx-auto"></div>
-                      </div>
-                      
-                      {/* Person 2 - Woman */}
-                      <div className="text-center animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-                        <div className="w-12 h-12 bg-blue-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-8 h-8 bg-blue-400 rounded-full"></div>
-                        </div>
-                        <div className="w-3 h-4 bg-blue-200 rounded-full mx-auto mb-1"></div>
-                        <div className="w-4 h-2 bg-blue-600 rounded-full mx-auto"></div>
-                      </div>
-                      
-                      {/* Person 3 - Man with glasses */}
-                      <div className="text-center animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-                        <div className="w-12 h-12 bg-blue-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-8 h-8 bg-blue-400 rounded-full"></div>
-                        </div>
-                        <div className="w-3 h-4 bg-blue-200 rounded-full mx-auto mb-1"></div>
-                        <div className="w-4 h-2 bg-blue-600 rounded-full mx-auto"></div>
-                      </div>
-                    </div>
-                    
-                    {/* Plant leaves */}
-                    <div className="absolute -left-4 top-4 w-8 h-8 bg-blue-200 rounded-full opacity-60 animate-pulse"></div>
-                    <div className="absolute -right-4 top-6 w-6 h-6 bg-blue-200 rounded-full opacity-60 animate-pulse animation-delay-2000"></div>
-                    
-                    {/* Floating elements */}
-                    <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-blue-300 rounded-full opacity-60 animate-ping"></div>
-                    <div className="absolute top-1/2 -right-2 w-2 h-2 bg-blue-300 rounded-full opacity-60 animate-ping" style={{ animationDelay: '1s' }}></div>
-                    <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-300 rounded-full opacity-60 animate-ping" style={{ animationDelay: '2s' }}></div>
+              <div className="relative w-full max-w-lg">
+                <div className="relative">
+                  {/* Mission Image */}
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <img 
+                      src="/mission.png" 
+                      alt="Our Mission - MealVersity mission and values" 
+                      className="w-full h-auto object-cover rounded-2xl"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Content */}
-            <div className="space-y-6 order-1 lg:order-2 animate-fade-in-right">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+            <div className="space-y-8 order-1 lg:order-2 animate-fade-in-right">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-teal-500 text-white px-6 py-3 rounded-full text-lg font-semibold mb-6 shadow-lg">
+                <Target className="w-5 h-5" />
                 Our Mission
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
+                To serve delicious, healthy, and affordable meals
               </h2>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                To serve delicious, healthy, and affordable meals that make life easier and happier – for <span className="font-bold text-blue-900">EVERYONE</span>.
-              </p>
+              <div className="bg-gradient-to-r from-green-100 to-teal-100 rounded-2xl p-8 border border-green-200">
+                <p className="text-2xl text-gray-800 leading-relaxed font-semibold">
+                  That make life easier and happier – for <span className="font-bold text-blue-900">EVERYONE</span>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Our Values Section */}
-        <div className="mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
-            <div className="space-y-6 animate-fade-in-left">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+            <div className="space-y-8 animate-fade-in-left">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-semibold mb-6 shadow-lg">
+                <Heart className="w-5 h-5" />
                 Our Values
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
+                What drives us forward
               </h2>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {[
-                  { title: "Freshness First", description: "Cooked daily with love." },
-                  { title: "Hygienic & Safe", description: "No shortcuts, no compromise." },
-                  { title: "Affordable for All", description: "From budget meals to premium plans." },
-                  { title: "Inclusive", description: "Food for all lifestyles, not just families." }
+                  { title: "Freshness First", description: "Cooked daily with love.", icon: "🌱" },
+                  { title: "Hygienic & Safe", description: "No shortcuts, no compromise.", icon: "🛡️" },
+                  { title: "Affordable for All", description: "From budget meals to premium plans.", icon: "💰" },
+                  { title: "Inclusive", description: "Food for all lifestyles, not just families.", icon: "🤝" }
                 ].map((value, index) => (
-                  <div key={index} className="flex items-start space-x-4 animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
-                    <div className="w-3 h-3 bg-orange-500 rounded-full mt-2 flex-shrink-0 animate-pulse"></div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900">{value.title}</h3>
-                      <p className="text-gray-700">{value.description}</p>
+                  <div key={index} className="flex items-start space-x-4 animate-fade-in-up bg-white/50 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300" style={{ animationDelay: `${index * 150}ms` }}>
+                    <div className="text-3xl">{value.icon}</div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{value.title}</h3>
+                      <p className="text-gray-700 font-medium">{value.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Right Illustration */}
+                        {/* Right Illustration */}
             <div className="relative flex justify-center lg:justify-end animate-fade-in-right">
-              <div className="relative w-full max-w-md lg:max-w-lg">
-                <div className="bg-white rounded-3xl p-8 shadow-2xl border border-orange-100 hover:shadow-3xl transition-all duration-500 transform hover:scale-105">
-                  {/* Family around round table */}
-                  <div className="relative">
-                    {/* Round table */}
-                    <div className="w-32 h-32 bg-gradient-to-r from-amber-200 to-orange-200 rounded-full mx-auto mb-6 relative animate-pulse">
-                      {/* Food items on table */}
-                      <div className="absolute top-4 left-4 w-6 h-6 bg-red-600 rounded-full animate-bounce"></div>
-                      <div className="absolute top-4 right-4 w-6 h-6 bg-yellow-400 rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
-                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-3 bg-green-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '1.5s' }}></div>
-                    </div>
-                    
-                    {/* People around table */}
-                    <div className="grid grid-cols-2 gap-8">
-                      {/* Top row */}
-                      <div className="text-center animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-                        <div className="w-10 h-10 bg-blue-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-6 h-6 bg-blue-400 rounded-full"></div>
-                        </div>
-                        <div className="w-2 h-3 bg-blue-200 rounded-full mx-auto mb-1"></div>
-                        <div className="w-3 h-2 bg-blue-600 rounded-full mx-auto"></div>
-                      </div>
-                      <div className="text-center animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-                        <div className="w-10 h-10 bg-pink-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-6 h-6 bg-pink-400 rounded-full"></div>
-                        </div>
-                        <div className="w-2 h-3 bg-pink-200 rounded-full mx-auto mb-1"></div>
-                        <div className="w-3 h-2 bg-pink-600 rounded-full mx-auto"></div>
-                      </div>
-                      
-                      {/* Bottom row */}
-                      <div className="text-center animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-                        <div className="w-10 h-10 bg-blue-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-6 h-6 bg-blue-400 rounded-full"></div>
-                        </div>
-                        <div className="w-2 h-3 bg-blue-200 rounded-full mx-auto mb-1"></div>
-                        <div className="w-3 h-2 bg-blue-600 rounded-full mx-auto"></div>
-                      </div>
-                      <div className="text-center animate-fade-in-up" style={{ animationDelay: '800ms' }}>
-                        <div className="w-10 h-10 bg-teal-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-6 h-6 bg-teal-400 rounded-full"></div>
-                        </div>
-                        <div className="w-2 h-3 bg-teal-200 rounded-full mx-auto mb-1"></div>
-                        <div className="w-3 h-2 bg-teal-600 rounded-full mx-auto"></div>
-                      </div>
-                    </div>
+              <div className="relative w-full max-w-lg">
+                <div className="relative">
+                  {/* Dining Image */}
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <img 
+                      src="/dining-img.png" 
+                      alt="Our Values - Family dining together" 
+                      className="w-full h-auto object-cover rounded-2xl"
+                      loading="lazy"
+                    />
                   </div>
                   
                   {/* Bottom text */}
-                  <div className="text-center mt-4">
-                    <p className="text-sm text-gray-600 font-medium">Family dining together</p>
+                  <div className="text-center mt-6">
+                    <p className="text-lg text-gray-700 font-semibold">Family dining together</p>
                   </div>
                 </div>
-                
-                {/* Floating elements */}
-                <div className="absolute -top-4 -left-4 w-12 h-12 bg-orange-200 rounded-full opacity-60 animate-pulse"></div>
-                <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-yellow-200 rounded-full opacity-60 animate-pulse animation-delay-2000"></div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Key Features Grid - 2x2 Layout */}
+        <div className="mb-24">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-full text-lg font-semibold mb-6 shadow-lg">
+              <Target className="w-5 h-5" />
+              Common Food Challenges?
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+              We understand your daily struggles with food
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Here's how we solve them with our innovative approach
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
+            {/* Question Box 1 */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500">
+                <div className="flex items-start space-x-4">
+                  <div className="w-4 h-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mt-2 flex-shrink-0 shadow-lg"></div>
+                  <div className="flex-1">
+                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                      🍔
+                    </div>
+                    <p className="text-xl font-semibold text-gray-800 leading-relaxed">
+                      Eating oily restaurant food every day?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Question Box 2 */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500">
+                <div className="flex items-start space-x-4">
+                  <div className="w-4 h-4 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full mt-2 flex-shrink-0 shadow-lg"></div>
+                  <div className="flex-1">
+                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                      🎈
+                    </div>
+                    <p className="text-xl font-semibold text-gray-800 leading-relaxed">
+                      Mess food that's either late or tasteless?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Question Box 3 */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500">
+                <div className="flex items-start space-x-4">
+                  <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0 shadow-lg"></div>
+                  <div className="flex-1">
+                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                      ⏰
+                    </div>
+                    <p className="text-xl font-semibold text-gray-800 leading-relaxed">
+                      No time to cook during classes or work?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Question Box 4 */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-teal-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500">
+                <div className="flex items-start space-x-4">
+                  <div className="w-4 h-4 bg-gradient-to-r from-green-500 to-teal-500 rounded-full mt-2 flex-shrink-0 shadow-lg"></div>
+                  <div className="flex-1">
+                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                      💰
+                    </div>
+                    <p className="text-xl font-semibold text-gray-800 leading-relaxed">
+                      Spending ₹5000-₹7000/month on unhealthy food?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Solution Features Grid */}
+        <div className="mb-16 lg:mb-24">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-500 to-blue-500 text-white px-6 py-3 rounded-full text-lg font-semibold mb-6 shadow-lg">
+              <Award className="w-5 h-5" />
+              Our Solutions
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+              Comprehensive solutions to all your food challenges
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              We provide innovative solutions that make healthy eating effortless
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {/* Feature 1 */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-teal-400 to-emerald-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 h-full">
+                <div className="text-center h-full flex flex-col justify-center">
+                  <div className="relative mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <Check className="w-10 h-10 text-white" />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center">
+                      <Sparkles className="w-3 h-3 text-white" />
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4 leading-relaxed">
+                    Home-style meals made by trusted local kitchens
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 h-full">
+                <div className="text-center h-full flex flex-col justify-center">
+                  <div className="relative mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <Truck className="w-10 h-10 text-white" />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
+                      <Clock className="w-3 h-3 text-white" />
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4 leading-relaxed">
+                    On-time delivery by verified delivery agents
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 h-full">
+                <div className="text-center h-full flex flex-col justify-center">
+                  <div className="relative mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <CreditCard className="w-10 h-10 text-white" />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-blue-400 rounded-full flex items-center justify-center">
+                      <DollarSign className="w-3 h-3 text-white" />
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4 leading-relaxed">
+                    Affordable weekly & monthly plans
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Feature 4 */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 h-full">
+                <div className="text-center h-full flex flex-col justify-center">
+                  <div className="relative mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <Star className="w-10 h-10 text-white" />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-orange-400 rounded-full flex items-center justify-center">
+                      <Heart className="w-3 h-3 text-white" />
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4 leading-relaxed">
+                    Flexible payment via UPI, Wallet, or Cash
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
       </div>
     </section>
   )
