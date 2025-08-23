@@ -98,7 +98,7 @@ html {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -106,12 +106,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #f97316, #eab308);
+  background: linear-gradient(to bottom, #044735, #0a7a5a);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #ea580c, #ca8a04);
+  background: linear-gradient(to bottom, #033a2c, #09664b);
 }
 
 /* Focus styles for accessibility */
