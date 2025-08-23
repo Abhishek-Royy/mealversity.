@@ -22,7 +22,7 @@ const ChatBot = () => {
           subtitle: "Start a chat. We're here to help you 24/7.",
           footer: '',
           getStarted: 'New Conversation',
-          inputPlaceholder: 'Type your question..',
+          inputPlaceholder: 'Type your question...',
         },
       },
       enableStreaming: false,
