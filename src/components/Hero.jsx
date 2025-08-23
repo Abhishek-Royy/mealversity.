@@ -1,6 +1,9 @@
 import React from 'react'
 import { Check, Calendar, Clock, Star, ArrowRight } from 'lucide-react'
 
+import ChatBot from './Chatbot'
+import './ChatBot.css'
+
 const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden pt-20" style={{ backgroundColor: '#FFF5D5' }}>
@@ -55,6 +58,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <ChatBot/>
     </section>
   )
 }
