@@ -13,6 +13,10 @@ import {
   Award,
   Clock,
   DollarSign,
+  UserCircle,
+  TrendingUp,
+  TruckIcon,
+  UtensilsCrossed,
 } from "lucide-react";
 
 const Features = () => {
@@ -125,13 +129,136 @@ const Features = () => {
                 Our Mission
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A365D] leading-tight">
-                To serve delicious, healthy, and affordable meals
+                At MealVersity, we serve more than food
               </h2>
-              <div className="bg-gradient-to-r from-green-100 to-teal-100 rounded-2xl p-8 border border-green-200">
-                <p className="text-2xl text-gray-800 leading-relaxed font-semibold">
-                  That make life easier and happier – for{" "}
-                  <span className="font-bold text-[#1A365D]">EVERYONE</span>.
-                </p>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                We serve dreams (with a side of hygiene 😉). We deliver healthy, tasty, and affordable meals from partner kitchens to your plate.
+              </p>
+              
+              <div className="space-y-6">
+                {[
+                  {
+                    icon: "👩‍🍳",
+                    title: "Empowering Women",
+                    description: "Empower housewives to run their own cloud kitchens"
+                  },
+                  {
+                    icon: "🤝",
+                    title: "Bank Partnerships",
+                    description: "Supported by trusted banks to turn recipes into revenue"
+                  },
+                  {
+                    icon: "😊",
+                    title: "Creating Smiles",
+                    description: "Turning smiles into full tummies from clean, safe kitchens"
+                  },
+                  {
+                    icon: "🍽️",
+                    title: "Quality & Safety",
+                    description: "All meals come from clean, safe, and happy kitchens"
+                  }
+                ].map((point, index) => (
+                  <div 
+                    key={index}
+                    className="flex items-start space-x-4 bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/20 shadow-md hover:shadow-lg transition-all duration-300"
+                  >
+                    <span className="text-2xl flex-shrink-0">{point.icon}</span>
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-1">{point.title}</h3>
+                      <p className="text-gray-700">{point.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Highlights Section */}
+        <div className="mb-24">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-semibold mb-6 shadow-lg">
+              <TrendingUp className="w-5 h-5" />
+              Key Highlights
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A365D] mb-6">
+              What Makes MealVersity Special
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Our unique approach to food delivery creates value for everyone in our ecosystem
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Empowering Women Entrepreneurs */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 to-purple-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 h-full">
+                <div className="flex items-start space-x-4">
+                  <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <UserCircle className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-[#1A365D] mb-3">Empowering Women Entrepreneurs</h3>
+                    <p className="text-gray-700">
+                      We partner with passionate housewives to help them start their own cloud kitchens under the MealVersity brand.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Financial Support */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-teal-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 h-full">
+                <div className="flex items-start space-x-4">
+                  <div className="w-14 h-14 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <DollarSign className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-[#1A365D] mb-3">Financial Support</h3>
+                    <p className="text-gray-700">
+                      Tie-ups with banking institutions make it easy for our entrepreneurs to access the capital they need.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Premium Delivery Channels */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 h-full">
+                <div className="flex items-start space-x-4">
+                  <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <TruckIcon className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-[#1A365D] mb-3">Premium Delivery Channels</h3>
+                    <p className="text-gray-700">
+                      Enjoy MealVersity meals on our platform, or via premium sister brands like MealOrbis on Zomato and other MealSigma on Swiggy.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Feeding India Initiative */}
+            <div className="group relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+              <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 h-full">
+                <div className="flex items-start space-x-4">
+                  <div className="w-14 h-14 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <UtensilsCrossed className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-[#1A365D] mb-3">Feeding India Initiative</h3>
+                    <p className="text-gray-700">
+                      Supplying nutritious meals to migrant workers in partnership with manpower agencies and factory owners.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -235,7 +362,6 @@ const Features = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
             {/* Question Box 1 */}
             <div className="group relative">
-              {/* <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div> */}
               <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500">
                 <div className="flex items-start space-x-4">
                   <div className="w-4 h-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mt-2 flex-shrink-0 shadow-lg"></div>
@@ -250,7 +376,6 @@ const Features = () => {
 
             {/* Question Box 2 */}
             <div className="group relative">
-             
               <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500">
                 <div className="flex items-start space-x-4">
                   <div className="w-4 h-4 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full mt-2 flex-shrink-0 shadow-lg"></div>
@@ -269,7 +394,6 @@ const Features = () => {
                 <div className="flex items-start space-x-4">
                   <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mt-2 flex-shrink-0 shadow-lg"></div>
                   <div className="flex-1">
-               
                     <p className="text-xl font-semibold text-gray-800 leading-relaxed">
                       No time to cook during classes or work?
                     </p>
@@ -280,12 +404,10 @@ const Features = () => {
 
             {/* Question Box 4 */}
             <div className="group relative">
-     
               <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500">
                 <div className="flex items-start space-x-4">
                   <div className="w-4 h-4 bg-gradient-to-r from-green-500 to-teal-500 rounded-full mt-2 flex-shrink-0 shadow-lg"></div>
                   <div className="flex-1">
-                
                     <p className="text-xl font-semibold text-gray-800 leading-relaxed">
                       Spending ₹5000-₹7000/month on unhealthy food?
                     </p>

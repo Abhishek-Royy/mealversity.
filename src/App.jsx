@@ -7,6 +7,7 @@ import TeamMember from './components/Team'
 import AppLaunch from './components/AppLaunch'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Career from './components/Career'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <HowItWorks />
       <TeamMember />
       <AppLaunch />
+      <Career/>
       <Contact />
       <Footer />
     </div>
