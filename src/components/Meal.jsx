@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Users, Utensils, Star, IndianRupee } from "lucide-react";
+import { Users, Utensils, Star, IndianRupee, Info } from "lucide-react";
 
 const Meal = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -12,7 +12,7 @@ const Meal = () => {
       planName: "Power Lunch 7",
       code: "PL7MIX",
       details: "Weekly lunch (Veg + Non-Veg) - 7 meals",
-      forWhom: "Office goers, Students needing variety",
+      forWhom: "Students or anyone wanting a short-term weekly lunch plan ",
       sellingPrice: "499",
       popular: true,
       color: "from-orange-400 to-yellow-400",
@@ -26,7 +26,7 @@ const Meal = () => {
       planName: "Green Feast 7",
       code: "GF7VEG",
       details: "Weekly vegetarian lunch - 7 meals",
-      forWhom: "Pure veg lovers, Health-conscious",
+      forWhom: "Pure vegetarians & health-conscious eaters ",
       sellingPrice: "399 ",
       popular: false,
       color: "from-green-400 to-emerald-400",
@@ -40,7 +40,7 @@ const Meal = () => {
       planName: "Power Lunch 28",
       code: "PL28MIX",
       details: "Monthly lunch (Veg + Non-Veg) - 28 meals",
-      forWhom: "Busy professionals, Families",
+      forWhom: "Individuals wanting a hassle-free monthly lunch plan ",
       sellingPrice: "1,749 ",
       popular: false,
       color: "from-blue-400 to-indigo-400",
@@ -54,7 +54,7 @@ const Meal = () => {
       planName: "Green Feast 28",
       code: "GF28VEG",
       details: "Monthly vegetarian lunch - 28 meals",
-      forWhom: "Vegetarian families, Elderly",
+      forWhom: "Vegetarians who want a monthly subscription ",
       sellingPrice: "1,549 ",
       popular: false,
       color: "from-teal-400 to-cyan-400",
@@ -69,7 +69,7 @@ const Meal = () => {
       planName: "Evening Power 7",
       code: "EP7MIX",
       details: "Weekly dinner (Veg + Non-Veg) - 7 meals",
-      forWhom: "Working individuals, Hostellers",
+      forWhom: "Busy individuals with no time to cook at night",
       sellingPrice: "499",
       popular: false,
       color: "from-purple-400 to-pink-400",
@@ -83,7 +83,7 @@ const Meal = () => {
       planName: "Veg Nights 7",
       code: "VN7VEG",
       details: "Weekly vegetarian dinner - 7 meals",
-      forWhom: "Veg eaters, Diet-conscious",
+      forWhom: "Vegetarians & diet-conscious people",
       sellingPrice: "399 ",
       popular: false,
       color: "from-emerald-400 to-green-400",
@@ -97,7 +97,7 @@ const Meal = () => {
       planName: "Evening Power 28",
       code: "EP28MIX",
       details: "Monthly dinner (Veg + Non-Veg) - 28 meals",
-      forWhom: "Families, Professionals",
+      forWhom: ": Individuals with busy work schedules",
       sellingPrice: "1,749 ",
       popular: false,
       color: "from-indigo-400 to-purple-400",
@@ -111,7 +111,7 @@ const Meal = () => {
       planName: "Veg Nights 28",
       code: "VN28VEG",
       details: "Monthly vegetarian dinner - 28 meals",
-      forWhom: "Veg families, Seniors",
+      forWhom: "Vegetarians wanting a monthly dinner plan ",
       sellingPrice: "1,549 ",
       popular: false,
       color: "from-cyan-400 to-blue-400",
@@ -126,7 +126,7 @@ const Meal = () => {
       planName: "Essential Duo 14",
       code: "ED14MIX",
       details: "Weekly lunch + dinner (Veg + Non-Veg) - 14 meals",
-      forWhom: "Office goers, Couples",
+      forWhom: "Individuals wanting both lunch & dinner for a week ",
       sellingPrice: "1,199",
       popular: true,
       color: "from-red-400 to-orange-400",
@@ -140,7 +140,7 @@ const Meal = () => {
       planName: "Special Duo 14",
       code: "SD14MIX",
       details: "Premium weekly lunch + dinner (Veg + Non-Veg) - 14 meals",
-      forWhom: "Foodies, Premium customers",
+      forWhom: "Foodies who want premium quality meals ",
       sellingPrice: "849 ",
       popular: false,
       color: "from-pink-400 to-rose-400",
@@ -154,7 +154,7 @@ const Meal = () => {
       planName: "Essential Duo 14 Veg",
       code: "ED14VEG",
       details: "Weekly lunch + dinner (Veg) - 14 meals",
-      forWhom: "Veg couples, Health-conscious",
+      forWhom: "Vegetarians wanting both lunch & dinner for a week ",
       sellingPrice: "849 ",
       popular: false,
       color: "from-lime-400 to-green-400",
@@ -168,7 +168,7 @@ const Meal = () => {
       planName: "Essential Duo 56",
       code: "ED56MIX",
       details: "Monthly lunch + dinner (Veg + Non-Veg) - 56 meals",
-      forWhom: "Families, Busy households",
+      forWhom: "Individuals looking for a long-term meal plan ",
       sellingPrice: "2,949",
       popular: false,
       color: "from-amber-400 to-orange-400",
@@ -182,7 +182,7 @@ const Meal = () => {
       planName: "Special Duo 56",
       code: "SD56MIX",
       details: "Premium monthly lunch + dinner (Veg + Non-Veg) - 56 meals",
-      forWhom: "Luxury lifestyle customers",
+      forWhom: "Premium customers wanting daily lunch & dinner ",
       sellingPrice: "3,499",
       popular: false,
       color: "from-violet-400 to-purple-400",
@@ -196,7 +196,7 @@ const Meal = () => {
       planName: "Essential Duo 56 Veg",
       code: "ED56VEG",
       details: "Monthly lunch + dinner (Veg) - 56 meals",
-      forWhom: "Vegetarian families, Wellness seekers",
+      forWhom: "Long-term vegetarian meal lovers",
       sellingPrice: "2,599 ",
       popular: false,
       color: "from-sky-400 to-blue-400",
@@ -216,7 +216,7 @@ const Meal = () => {
   return (
     <section
       id="meal-plans"
-      className="py-30  lg:pt-52"
+      className="py-30 lg:pt-52"
       style={{ backgroundColor: "#FFF5D5" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -314,7 +314,7 @@ const Meal = () => {
                   <div className="bg-white/50 rounded-lg p-4">
                     <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
                       <Users className="w-4 h-4 mr-2" />
-                      Perfect For
+                     Preferred For
                     </h4>
                     <p className="text-sm text-gray-700">{plan.forWhom}</p>
                   </div>
@@ -323,17 +323,15 @@ const Meal = () => {
                 {/* Price Section */}
                 <div className="bg-white/50 rounded-lg p-4 mb-6">
                   <h4 className="font-semibold">
-                    Investment for your health only
+                    Investment for your health only on
                   </h4>
                   <div className="flex gap-2">
                     <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                      <IndianRupee className="w-4 h-4 mr-2" />
-                      Price:
+                      <IndianRupee className="w-4 h-4 mr-1" />
+                      <p className="font-medium text-gray-900">
+                        {plan.sellingPrice || " Coming Soon"}
+                      </p>
                     </h4>
-                    <p className="font-medium text-gray-900">
-                      {" "}
-                      {plan.sellingPrice || " Coming Soon"}
-                    </p>
                   </div>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     {/* <div>
@@ -421,7 +419,7 @@ const Meal = () => {
                     <div className="bg-white/50 rounded-lg p-4">
                       <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
                         <Users className="w-4 h-4 mr-2" />
-                        Perfect For
+                        Preferred For
                       </h4>
                       <p className="text-sm text-gray-700">{plan.forWhom}</p>
                     </div>
@@ -430,18 +428,16 @@ const Meal = () => {
                   {/* Price Section */}
                   <div className="bg-white/50 rounded-lg p-4 mb-6">
                     <h4 className="font-semibold">
-                      Investment for your health only
+                      Investment for your health only on
                     </h4>
 
                     <div className="flex gap-2">
-                      <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                        <IndianRupee className="w-4 h-4 mr-2" />
-                        Price:{" "}
-                      </h4>
+                     <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
+                      <IndianRupee className="w-4 h-4 mr-1" />
                       <p className="font-medium text-gray-900">
-                        {" "}
                         {plan.sellingPrice || " Coming Soon"}
                       </p>
+                    </h4>
                     </div>
                     {/* <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
@@ -477,6 +473,24 @@ const Meal = () => {
                   className="w-2 h-2 bg-gray-300 rounded-full transition-all duration-300"
                 ></div>
               ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Highlights Note */}
+        <div className="mt-16 p-6 bg-gradient-to-r from-orange-50 to-amber-50 rounded-2xl border border-orange-200 shadow-lg">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0 mt-1">
+              <Info className="w-6 h-6 text-orange-600" />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Important Note
+              </h3>
+              <p className="text-gray-700">
+                Prices are all-inclusive for meals. Delivery charges or taxes, if applicable, 
+                will be shown at checkout in the app.
+              </p>
             </div>
           </div>
         </div>

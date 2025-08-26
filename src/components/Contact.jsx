@@ -95,7 +95,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-700 font-medium">Address</p>
-                    <p className="text-gray-600">MealVersity Kitchen Location</p>
+                    <p className="text-gray-600">E2 Hostel , Kazipara, barasat -700125</p>
                   </div>
                 </div>
 
@@ -117,7 +117,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-700 font-medium">Email</p>
-                    <p className="text-gray-600">mealversityhelp@gmail.com</p>
+                    <p className="text-gray-600"> mealversityhelp@gmail.com</p>
                   </div>
                 </div>
               </div>

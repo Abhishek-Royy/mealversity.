@@ -183,7 +183,7 @@ function Career() {
                   </div>
                   <div>
                     <p className="text-gray-700 font-medium">Call Us</p>
-                    <p className="text-lg text-[#1A365D] font-semibold">+91 98765 43210</p>
+                    <p className="text-lg text-[#1A365D] font-semibold">+91 8900099783</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -192,7 +192,7 @@ function Career() {
                   </div>
                   <div>
                     <p className="text-gray-700 font-medium">Email Us</p>
-                    <p className="text-lg text-[#1A365D] font-semibold">careers@mealversity.com</p>
+                    <p className="text-lg text-[#1A365D] font-semibold">mealversityhelp@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -201,7 +201,7 @@ function Career() {
                   </div>
                   <div>
                     <p className="text-gray-700 font-medium">Visit Us</p>
-                    <p className="text-lg text-[#1A365D] font-semibold">123 Food Street, Mealville</p>
+                    <p className="text-lg text-[#1A365D] font-semibold"> E2 Hostel , Kazipara, barasat -700125</p>
                   </div>
                 </div>
               </div>
