@@ -51,6 +51,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<Features />} />
           <Route path="/app-launch" element={<AppLaunch />} />
+          <Route path="/team" element={<TeamMember />} />
         </Routes>
         <Footer />
       </div>
