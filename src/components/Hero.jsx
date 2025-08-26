@@ -2,6 +2,8 @@ import React from "react";
 import { ArrowRight, Check } from "lucide-react";
 import AppLaunch from "../components/AppLaunch"
 
+import {Link} from "react-router-dom"
+
 const Hero = () => {
   return (
     <section
@@ -74,12 +76,13 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="/meal-plans">
+              <Link to="/meal-plans">
+              
                 <button className="group bg-gradient-to-r from-[#044735] to-[#0a7a5a] hover:from-[#033a2c] hover:to-[#09664b] text-white px-8 py-4 rounded-full text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2 w-full sm:w-auto">
                   Start Eating Better
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
 
