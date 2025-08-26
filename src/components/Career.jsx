@@ -64,7 +64,7 @@ function Career() {
               </div>
               
               <div className="mt-8 pt-6 border-t border-gray-200">
-               <a href="#contact"> <button className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 px-6 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+               <a href="/contact"> <button className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 px-6 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                   Apply Now
                 </button></a>
               </div>
