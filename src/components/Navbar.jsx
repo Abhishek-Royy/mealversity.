@@ -128,7 +128,7 @@ const Navbar = () => {
             
             {/* Mobile Download Button */}
             <div className="pt-4 pb-3">
-              <Link to="/#app-launch" onClick={() => setIsOpen(false)}>
+              <Link to="/app-launch" onClick={() => setIsOpen(false)}>
                 <button className="w-full bg-gradient-to-r from-[#044735] to-[#0a7a5a]  hover:from-[#033a2c] hover:to-[#09664b] text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-200 shadow-lg">
                   Download App
                 </button>
