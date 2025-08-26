@@ -1,48 +1,28 @@
 import React, { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [activeSection, setActiveSection] = useState('hero')
+  const location = useLocation()
 
-  // Handle scroll effect and active section detection
+  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
-      
-      // Detect active section
-      const sections = ['hero', 'features', 'meal-plans', 'contact']
-      const scrollPosition = window.scrollY + 100 // Offset for navbar height
-      
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i])
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i])
-          break
-        }
-      }
     }
     
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Smooth scroll to section
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-    setIsOpen(false) // Close mobile menu
-  }
-
   const navItems = [
-    { name: 'Home', id: 'hero' },
-    { name: 'About', id: 'features' },
-    { name: 'Meal Plan', id: 'meal-plans' },
-    { name: 'Contact', id: 'contact' },
-    { name: 'Career', id: 'career' },
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Meal Plan', path: '/meal-plans' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Career', path: '/career' },
   ]
 
   return (
@@ -55,7 +35,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img 
                 src="/logo.png" 
                 alt="Mealversity Logo" 
@@ -66,17 +46,17 @@ const Navbar = () => {
               }`}  style={{ fontFamily: '"Playfair Display", serif' }}>
                 MealVersity
               </span>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.name}
-                onClick={() => scrollToSection(item.id)}
+                to={item.path}
                 className={`px-3 py-2 text-sm font-bold rounded-md transition-all duration-200 relative ${
-                  activeSection === item.id
+                  location.pathname === item.path
                     ? 'text-orange-600'
                     : isScrolled 
                       ? 'text-gray-700 hover:text-orange-600' 
@@ -85,21 +65,22 @@ const Navbar = () => {
               >
                 {item.name}
                 {/* Active underline */}
-                {activeSection === item.id && (
+                {location.pathname === item.path && (
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-600 rounded-full transform scale-x-100 transition-transform duration-300"></div>
                 )}
                 {/* Hover underline */}
                 <div className={`absolute bottom-0 left-0 right-0 h-0.5 bg-orange-600 rounded-full transform transition-transform duration-300 ${
-                  activeSection === item.id ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  location.pathname === item.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`}></div>
-              </button>
+              </Link>
             ))}
             
             {/* Download Button */}
-            
-            <a href="#app-launch"><button className="bg-gradient-to-r from-[#044735] to-[#0a7a5a]  hover:from-[#033a2c] hover:to-[#09664b] text-white px-6 py-2.5 rounded-full text-sm font-semibold  transform hover:scale-105 transition-all duration-200 shadow-lg">
-              Download App
-            </button></a>
+            <Link to="/app-launch">
+              <button className="bg-gradient-to-r from-[#044735] to-[#0a7a5a]  hover:from-[#033a2c] hover:to-[#09664b] text-white px-6 py-2.5 rounded-full text-sm font-semibold  transform hover:scale-105 transition-all duration-200 shadow-lg">
+                Download App
+              </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -127,29 +108,31 @@ const Navbar = () => {
         <div className="bg-white/95 backdrop-blur-md border-t border-orange-100 shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.name}
-                onClick={() => scrollToSection(item.id)}
+                to={item.path}
+                onClick={() => setIsOpen(false)}
                 className={`block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-all duration-200 relative ${
-                  activeSection === item.id
+                  location.pathname === item.path
                     ? 'text-orange-600 bg-orange-50'
                     : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
                 }`}
               >
                 {item.name}
                 {/* Active indicator for mobile */}
-                {activeSection === item.id && (
+                {location.pathname === item.path && (
                   <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1 h-6 bg-orange-600 rounded-r-full"></div>
                 )}
-              </button>
+              </Link>
             ))}
             
             {/* Mobile Download Button */}
             <div className="pt-4 pb-3">
-              <a href="#app-launch">
-              <button className="w-full bg-gradient-to-r from-[#044735] to-[#0a7a5a]  hover:from-[#033a2c] hover:to-[#09664b] text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-200 shadow-lg">
-                Download App
-              </button></a>
+              <Link to="/#app-launch" onClick={() => setIsOpen(false)}>
+                <button className="w-full bg-gradient-to-r from-[#044735] to-[#0a7a5a]  hover:from-[#033a2c] hover:to-[#09664b] text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-200 shadow-lg">
+                  Download App
+                </button>
+              </Link>
             </div>
           </div>
         </div>

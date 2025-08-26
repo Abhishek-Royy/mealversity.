@@ -10,9 +10,11 @@ import {
   Heart,
   Mail,
 } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -22,10 +24,11 @@ const Footer = () => {
   };
 
   const quickLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#features" },
-    { name: "Meal Plans", href: "#meal-plans" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Meal Plans", path: "/meal-plans" },
+    { name: "Contact", path: "/contact" },
+    { name: "Career", path: "/career" },
   ];
 
   const services = [
@@ -53,11 +56,10 @@ const Footer = () => {
     },
   ];
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId.replace("#", ""));
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleNavigation = (path) => {
+    navigate(path);
+    // Scroll to top when navigating
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -68,12 +70,14 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Brand Information */}
             <div className="lg:col-span-1">
-              <h3
-                className="text-2xl font-bold text-[#044735] mb-4"
-                style={{ fontFamily: '"Playfair Display", serif' }}
-              >
-                MealVersity
-              </h3>
+              <Link to="/">
+                <h3
+                  className="text-2xl font-bold text-[#044735] mb-4"
+                  style={{ fontFamily: '"Playfair Display", serif' }}
+                >
+                  MealVersity
+                </h3>
+              </Link>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 Fresh, healthy, and delicious meals delivered right to your
                 doorstep. Your trusted partner for daily nutrition and
@@ -105,7 +109,7 @@ const Footer = () => {
                 {quickLinks.map((link) => (
                   <li key={link.name}>
                     <button
-                      onClick={() => scrollToSection(link.href)}
+                      onClick={() => handleNavigation(link.path)}
                       className="flex items-center text-gray-600 hover:text-orange-600 transition-colors duration-200 group w-full text-left"
                     >
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 group-hover:scale-125 transition-transform duration-200"></div>
@@ -157,13 +161,12 @@ const Footer = () => {
                   />
                   <Mail className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
                 </div>
-               <button
-  type="submit"
-  className="w-full bg-gradient-to-r from-[#044735] to-[#0a7a5a] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#033a2c] hover:to-[#09664b] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
->
-  Subscribe Now
-</button>
-
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-[#044735] to-[#0a7a5a] text-white py-3 px-6 rounded-lg font-semibold hover:from-[#033a2c] hover:to-[#09664b] transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Subscribe Now
+                </button>
               </form>
             </div>
           </div>

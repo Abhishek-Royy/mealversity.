@@ -16,7 +16,7 @@ import {
 
 function Career() {
   return (
-    <div id="career" className="relative overflow-hidden pt-20 pb-16 lg:pt-28 lg:pb-24" style={{ backgroundColor: "#FFF5D5" }}>
+    <div id="career" className="relative overflow-hidden pt-30 pb-16 lg:pt-52 lg:pb-24" style={{ backgroundColor: "#FFF5D5" }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">

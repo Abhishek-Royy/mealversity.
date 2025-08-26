@@ -23,6 +23,7 @@ const Meal = () => {
       color: "from-orange-400 to-yellow-400",
       bgColor: "bg-gradient-to-br from-orange-50 to-yellow-50",
       borderColor: "border-orange-200",
+      tagline: "Power your afternoon without the pause."
     },
     {
       id: 2,
@@ -36,6 +37,7 @@ const Meal = () => {
       color: "from-green-400 to-emerald-400",
       bgColor: "bg-gradient-to-br from-green-50 to-emerald-50",
       borderColor: "border-green-200",
+      tagline: "Power your afternoon without the pause."
     },
     {
       id: 3,
@@ -49,6 +51,7 @@ const Meal = () => {
       color: "from-blue-400 to-indigo-400",
       bgColor: "bg-gradient-to-br from-blue-50 to-indigo-50",
       borderColor: "border-blue-200",
+      tagline: "Power your afternoon without the pause."
     },
     {
       id: 4,
@@ -62,6 +65,7 @@ const Meal = () => {
       color: "from-teal-400 to-cyan-400",
       bgColor: "bg-gradient-to-br from-teal-50 to-cyan-50",
       borderColor: "border-teal-200",
+      tagline: "Power your afternoon without the pause."
     },
     // Dinner Category
     {
@@ -76,6 +80,7 @@ const Meal = () => {
       color: "from-purple-400 to-pink-400",
       bgColor: "bg-gradient-to-br from-purple-50 to-pink-50",
       borderColor: "border-purple-200",
+      tagline: "Wind down your day, not your standards."
     },
     {
       id: 6,
@@ -89,6 +94,7 @@ const Meal = () => {
       color: "from-emerald-400 to-green-400",
       bgColor: "bg-gradient-to-br from-emerald-50 to-green-50",
       borderColor: "border-emerald-200",
+      tagline: "Wind down your day, not your standards."
     },
     {
       id: 7,
@@ -102,6 +108,7 @@ const Meal = () => {
       color: "from-indigo-400 to-purple-400",
       bgColor: "bg-gradient-to-br from-indigo-50 to-purple-50",
       borderColor: "border-indigo-200",
+      tagline: "Wind down your day, not your standards."
     },
     {
       id: 8,
@@ -115,6 +122,7 @@ const Meal = () => {
       color: "from-cyan-400 to-blue-400",
       bgColor: "bg-gradient-to-br from-cyan-50 to-blue-50",
       borderColor: "border-cyan-200",
+      tagline: "Wind down your day, not your standards."
     },
     // Combo Category
     {
@@ -129,6 +137,7 @@ const Meal = () => {
       color: "from-red-400 to-orange-400",
       bgColor: "bg-gradient-to-br from-red-50 to-orange-50",
       borderColor: "border-red-200",
+      tagline: "For those who want it all—effortlessly."
     },
     {
       id: 10,
@@ -142,6 +151,7 @@ const Meal = () => {
       color: "from-pink-400 to-rose-400",
       bgColor: "bg-gradient-to-br from-pink-50 to-rose-50",
       borderColor: "border-pink-200",
+      tagline: "For those who want it all—effortlessly."
     },
     {
       id: 11,
@@ -155,6 +165,7 @@ const Meal = () => {
       color: "from-lime-400 to-green-400",
       bgColor: "bg-gradient-to-br from-lime-50 to-green-50",
       borderColor: "border-lime-200",
+      tagline: "For those who want it all—effortlessly."
     },
     {
       id: 12,
@@ -168,6 +179,7 @@ const Meal = () => {
       color: "from-amber-400 to-orange-400",
       bgColor: "bg-gradient-to-br from-amber-50 to-orange-50",
       borderColor: "border-amber-200",
+      tagline: "For those who want it all—effortlessly."
     },
     {
       id: 13,
@@ -181,6 +193,7 @@ const Meal = () => {
       color: "from-violet-400 to-purple-400",
       bgColor: "bg-gradient-to-br from-violet-50 to-purple-50",
       borderColor: "border-violet-200",
+      tagline: "For those who want it all—effortlessly."
     },
     {
       id: 14,
@@ -194,6 +207,7 @@ const Meal = () => {
       color: "from-sky-400 to-blue-400",
       bgColor: "bg-gradient-to-br from-sky-50 to-blue-50",
       borderColor: "border-sky-200",
+      tagline: "For those who want it all—effortlessly."
     },
   ];
 
@@ -207,7 +221,7 @@ const Meal = () => {
   return (
     <section
       id="meal-plans"
-      className="py-20"
+      className="py-30  lg:pt-52"
       style={{ backgroundColor: "#FFF5D5" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -217,10 +231,10 @@ const Meal = () => {
             Meal Plans
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Choose from our comprehensive range of meal plans designed for every
-            lifestyle and preference. From weekly to monthly plans, we have
-            something for everyone.
+        Whatever your day demands, we've built a plan that fits—not just your diet, but your rhythm, your ambition, your life. Go weekly. Go monthly. Go veg. Go mixed. This isn't one-size-fits-all. This is eating, perfected for you. 
           </p>
+          <br />
+          <p>Ready to eat better—and live smarter? Pick your plan. Own your day. </p>
         </div>
 
         {/* Category Filter */}
@@ -281,6 +295,10 @@ const Meal = () => {
                       Code: {plan.code}
                     </p>
                   </div>
+                  {/* Tagline */}
+                  <p className="text-sm font-medium text-gray-600 italic">
+                    {plan.tagline}
+                  </p>
                 </div>
 
                 {/* Plan Details */}
@@ -381,6 +399,10 @@ const Meal = () => {
                         Code: {plan.code}
                       </p>
                     </div>
+                    {/* Tagline */}
+                    <p className="text-sm font-medium text-gray-600 italic">
+                      {plan.tagline}
+                    </p>
                   </div>
 
                   {/* Plan Details */}

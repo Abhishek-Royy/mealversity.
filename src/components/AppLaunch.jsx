@@ -65,7 +65,7 @@ const AppLaunch = () => {
   ]
 
   return (
-    <section id="app-launch" className="py-20" style={{ backgroundColor: '#FFF5D5' }}>
+    <section id="app-launch" className="pt-30  pb-20  lg:pt-52" style={{ backgroundColor: '#FFF5D5' }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Container */}
         <div className={`relative bg-gradient-to-r from-yellow-50 to-blue-50 rounded-3xl border-2 border-dashed border-teal-400 p-8 md:p-12 shadow-2xl transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -130,15 +130,15 @@ const AppLaunch = () => {
           </div>
 
           {/* Launch Date Button */}
-          <div className="relative text-center mb-12 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
+          {/* <div className="relative text-center mb-12 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
             <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center mx-auto space-x-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
               <Calendar className="w-6 h-6 text-white" />
               <span>Available 10 Sept 2025</span>
             </button>
-          </div>
+          </div> */}
 
           {/* Countdown Timer */}
-          <div className="relative mb-12 animate-fade-in-up" style={{ animationDelay: '800ms' }}>
+          {/* <div className="relative mb-12 animate-fade-in-up" style={{ animationDelay: '800ms' }}>
             <div className="flex justify-center space-x-2 md:space-x-8">
               {Object.entries(countdown).map(([unit, value], index) => (
                 <div key={unit} className="text-center">
@@ -149,7 +149,7 @@ const AppLaunch = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Features Grid */}
           <div className="relative mb-12 animate-fade-in-up" style={{ animationDelay: '1000ms' }}>

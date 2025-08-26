@@ -23,7 +23,7 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="relative overflow-hidden pt-20 pb-1 lg:pt-32 lg:pb-2"
+      className="relative overflow-hidden pt-30 pb-1 lg:pt-52 lg:pb-2"
       style={{ backgroundColor: "#FFF5D5" }}
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,15 +34,13 @@ const Features = () => {
             <div className="space-y-8 animate-fade-in-left">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full text-lg font-semibold mb-6 shadow-lg">
                 <Users className="w-5 h-5" />
-                Who We Are
+               The World Of MealVersity
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A365D] leading-tight">
-                Not just another food delivery service
+              <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold text-[#1A365D] leading-tight">
+                Not just another food delivery service, we’re delivering peace of mind
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                MealVersity is a movement against boring food and kitchen
-                stress. We run our own professional kitchen, where freshness,
-                hygiene, and taste come first.
+               MealVersity here to give you back your time, your energy, and your joy around food — with meals crafted thoughtfully and delivered respectfully. <br/> We bring you food that’s fresh, flavorful, and made with the kind of care you’d only expect at home.
               </p>
               <div className="space-y-6">
                 <p className="text-xl text-gray-700 font-semibold">
@@ -50,11 +48,11 @@ const Features = () => {
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "A family tired of daily cooking stress",
-                    "A student surviving on instant noodles",
-                    "A bachelor who can't cook (or won't)",
-                    "A professional too busy to even think about cooking",
-                    "Or a migrant worker missing home-style food",
+                    "The Time-Rich Professional Who measures wealth in hours, not rupees.",
+                    "The Present Parent Who'd rather play than prep.",
+                    "The Hungry Learner Who needs brain food, not junk food.",
+                    "The Builders of Tomorrow Who build cities and deserve meals that build them back.",
+                    "The Wellness-Wise Who knows good food is the first step to a good life.",
                   ].map((item, index) => (
                     <li
                       key={index}
@@ -70,7 +68,7 @@ const Features = () => {
                 </ul>
                 <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-2xl p-6 border border-orange-200">
                   <p className="text-xl text-gray-800 font-bold text-center">
-                    We've got a meal plan for you.
+                   You focus on your purpose. We’ll focus on your plate. Welcome to MealVersity—reimagined.
                   </p>
                 </div>
               </div>
@@ -128,34 +126,39 @@ const Features = () => {
                 <Target className="w-5 h-5" />
                 Our Mission
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A365D] leading-tight">
-                At MealVersity, we serve more than food
+              <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold text-[#1A365D] leading-tight">
+                At MealVersity, We Don’t Just Feed You — We Transform Your Day
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed">
-                We serve dreams (with a side of hygiene 😉). We deliver healthy, tasty, and affordable meals from partner kitchens to your plate.
+                When you choose us, you’re not just eating — you’re upgrading your life, one meal at a time. Here’s what changes the moment that tiffin arrives: 
               </p>
               
               <div className="space-y-6">
                 {[
                   {
-                    icon: "👩‍🍳",
-                    title: "Empowering Women",
-                    description: "Empower housewives to run their own cloud kitchens"
+                    icon: "🌟",
+                    title: "You Gain Time & Mental Space ",
+                    description: "No more stressing about groceries, cooking, or cleaning. Your mind is clear, your schedule is free."
                   },
                   {
-                    icon: "🤝",
-                    title: "Bank Partnerships",
-                    description: "Supported by trusted banks to turn recipes into revenue"
+                    icon: "💆‍♂️",
+                    title: "You Feel Truly Cared For ",
+                    description: "Each meal is prepared with attention and love — the kind you’d get at home. You feel valued, nourished, and deeply supported."
                   },
                   {
-                    icon: "😊",
-                    title: "Creating Smiles",
-                    description: "Turning smiles into full tummies from clean, safe kitchens"
+                    icon: "👑",
+                    title: "You Make an Impact Without Trying",
+                    description: "Every meal you enjoy supports a woman’s journey to financial independence and helps provide nutritious food to India’s essential workers. "
                   },
                   {
-                    icon: "🍽️",
-                    title: "Quality & Safety",
-                    description: "All meals come from clean, safe, and happy kitchens"
+                    icon: "🍃",
+                    title: "You Eat Without Guilt ",
+                    description: "Fresh ingredients. Planet-friendly packaging. No compromises. Your body feels light, your conscience even lighter."
+                  },
+                  {
+                    icon: "⚡",
+                    title: "You Unlock Your Potential  ",
+                    description: "Well-fed means well-focused. Better food = better mood, better energy, a better you."
                   }
                 ].map((point, index) => (
                   <div 
@@ -185,7 +188,7 @@ const Features = () => {
               What Makes MealVersity Special
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Our unique approach to food delivery creates value for everyone in our ecosystem
+             MealVersity reimagines food delivery by serving communities, empowering dreams, and creating a healthier, happier ecosystem.
             </p>
           </div>
 
@@ -201,7 +204,7 @@ const Features = () => {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-[#1A365D] mb-3">Empowering Women Entrepreneurs</h3>
                     <p className="text-gray-700">
-                      We partner with passionate housewives to help them start their own cloud kitchens under the MealVersity brand.
+                     We turn passion into profession. By partnering with talented homemakers, we provide the tools, training, and platform to launch and grow their own cloud kitchens under the MealVersity brand. This isn’t just business—it’s transformation.
                     </p>
                   </div>
                 </div>
@@ -217,9 +220,9 @@ const Features = () => {
                     <DollarSign className="w-7 h-7 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-[#1A365D] mb-3">Financial Support</h3>
+                    <h3 className="text-xl font-bold text-[#1A365D] mb-3">Financial Support Backed by Banks </h3>
                     <p className="text-gray-700">
-                      Tie-ups with banking institutions make it easy for our entrepreneurs to access the capital they need.
+                      Dreams deserve funding. Through strategic partnerships with leading banking institutions, we make it simple for our kitchen partners to access capital, grow their operations, and turn recipes into sustainable revenue. 
                     </p>
                   </div>
                 </div>
@@ -237,7 +240,7 @@ const Features = () => {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-[#1A365D] mb-3">Premium Delivery Channels</h3>
                     <p className="text-gray-700">
-                      Enjoy MealVersity meals on our platform, or via premium sister brands like MealOrbis on Zomato and other MealSigma on Swiggy.
+                      Whether you order directly through our app or via our premium sister brands — MealOrbis on Zomato and MealSigma on Swiggy — you experience the same uncompromising quality, taste, and care. Great food, wherever you are.
                     </p>
                   </div>
                 </div>
@@ -255,7 +258,7 @@ const Features = () => {
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-[#1A365D] mb-3">Feeding India Initiative</h3>
                     <p className="text-gray-700">
-                      Supplying nutritious meals to migrant workers in partnership with manpower agencies and factory owners.
+                     Real food for real heroes. In collaboration with manpower agencies and factory owners, we provide nutritious, affordable meals to migrant workers — the backbone of our nation. This is our promise: no one gets left behind. 
                     </p>
                   </div>
                 </div>
