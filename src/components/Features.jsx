@@ -81,7 +81,7 @@ const Features = () => {
                   {/* Who We Are Image */}
                   <div className="relative overflow-hidden rounded-2xl">
                     <img
-                      src="/whoweare1.png"
+                      src="/about.png"
                       alt="Who We Are - MealVersity team and community"
                       className="w-full h-auto object-cover rounded-2xl"
                       loading="lazy"

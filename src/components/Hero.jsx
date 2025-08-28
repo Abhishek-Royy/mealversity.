@@ -1,14 +1,13 @@
 import React from "react";
 import { ArrowRight, Check } from "lucide-react";
-import AppLaunch from "../components/AppLaunch"
-
-import {Link} from "react-router-dom"
+import AppLaunch from "../components/AppLaunch";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden pt-20 lg:pt-24 pb-20 lg:pb-30"
+      className="relative overflow-hidden pt-16 lg:pt-20 pb-16 lg:pb-24"
       style={{ backgroundColor: "#FFF5D5" }}
     >
       {/* Background decorative elements */}
@@ -18,8 +17,8 @@ const Hero = () => {
         <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-yellow-100 rounded-full opacity-30 blur-xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left space-y-8 z-10">
             {/* Tagline */}
@@ -32,7 +31,7 @@ const Hero = () => {
             </div>
 
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
+               <h1 className="text-4xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
                 You Deserve Fresh, Healthy & Affordable Meals
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-600">
                   {" "}
@@ -40,7 +39,7 @@ const Hero = () => {
                 </span>
               </h1>
               
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+              <p className="text-lg md:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium"style={{ fontFamily: 'sans-serif' }}>
                 Invest in your well-being — not just your wallet. We deliver mom-quality healthy meals 
                 for students, professionals, families, and hardworking migrants — all made with love, 
                 priced with respect. Because you shouldn't have to choose between feeling cared for and staying within budget.
@@ -77,25 +76,22 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link to="/meal-plans">
-              
-                <button className="group bg-gradient-to-r from-[#044735] to-[#0a7a5a] hover:from-[#033a2c] hover:to-[#09664b] text-white px-8 py-4 rounded-full text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2 w-full sm:w-auto">
+                <button className="group bg-gradient-to-r from-[#044735] to-[#0a7a5a] hover:from-[#033a2c] hover:to-[#09664b] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-xl flex items-center justify-center gap-2 w-full sm:w-auto">
                   Start Eating Better
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="w-5 h-5" />
                 </button>
               </Link>
             </div>
           </div>
 
-          {/* Right Hero Image */}
+          {/* Right Hero Image - Enhanced size and simplified */}
           <div className="relative flex justify-center lg:justify-end z-10">
-            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl">
-     
-
+            <div className="relative w-full max-w-md lg:max-w-2xl">
               {/* Main image container */}
               <div className="relative">
-                <div className="relative rounded-3xl sm:p-6 lg:p-8">
-                  {/* Hero Image */}
-                  <div className="relative overflow-hidden rounded-2xl transform hover:scale-[1.02] transition-transform duration-500">
+                <div className="rounded-3xl">
+                  {/* Hero Image - Larger and without hover effects */}
+                  <div className="relative overflow-hidden rounded-2xl">
                     <img
                       src="/hero-img.png"
                       alt="Fresh and healthy meals for everyone"
