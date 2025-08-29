@@ -53,20 +53,26 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
-              <img 
-                src="/logo.png" 
-                alt="Mealversity Logo" 
-                className="h-8 w-auto lg:h-10"
-              />
-              <span className={`ml-3 text-xl lg:text-2xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-gray-200'
-              }`}  style={{ fontFamily: '"Playfair Display", serif' }}>
-                MealVersity
-              </span>
-            </Link>
-          </div>
+         <div className="flex-shrink-0">
+  <Link to="/" className="flex items-center">
+    <img 
+      src="/logo.png" 
+      alt="Mealversity Logo" 
+      className={`h-8 w-auto lg:h-10 transition duration-300 ${
+        isScrolled ? 'invert-0 brightness-100' : 'invert brightness-0 contrast-200'
+      }`}
+    />
+    <span 
+      className={`ml-3 text-xl lg:text-2xl font-bold transition-colors duration-300 ${
+        isScrolled ? 'text-gray-900' : 'text-gray-200'
+      }`}  
+      style={{ fontFamily: '"Playfair Display", serif' }}
+    >
+      MealVersity
+    </span>
+  </Link>
+</div>
+
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
