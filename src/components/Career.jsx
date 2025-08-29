@@ -19,7 +19,7 @@ import {Link} from "react-router-dom"
 
 function Career() {
   return (
-    <div id="career" className="relative overflow-hidden pt-30 pb-16 lg:pt-52 lg:pb-24" style={{ backgroundColor: "#FFF5D5" }}>
+    <div id="career" className="relative overflow-hidden pt-30 pb-16 lg:pt-52 lg:pb-24" style={{ background: "linear-gradient(135deg, #1a2a1a 0%, #2c3c2c 100%)" }}>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -27,10 +27,10 @@ function Career() {
             <Users className="w-5 h-5" />
             Join Our Team
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A365D] mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#FEC100] mb-6">
             Join the MealVersity Family
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
             Be part of our mission to deliver delicious, healthy meals while building opportunities for our community.
           </p>
         </div>
@@ -119,10 +119,10 @@ function Career() {
               <Heart className="w-5 h-5" />
               Why Work With Us
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A365D] mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#FEC100] mb-6">
               More Than Just a Job
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
               At MealVersity, we're building a community that supports and grows together.
             </p>
           </div>

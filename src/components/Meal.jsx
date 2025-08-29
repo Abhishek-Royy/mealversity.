@@ -217,22 +217,22 @@ const Meal = () => {
     <section
       id="meal-plans"
       className="py-30 lg:pt-52"
-      style={{ backgroundColor: "#FFF5D5" }}
+       style={{ background: "linear-gradient(135deg, #1a2a1a 0%, #2c3c2c 100%)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A365D] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#FEC100] mb-6">
             Meal Plans
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-xl text-[#FFFBEB] max-w-3xl mx-auto">
             Whatever your day demands, we've built a plan that fits—not just
             your diet, but your rhythm, your ambition, your life. Go weekly. Go
             monthly. Go veg. Go mixed. This isn't one-size-fits-all. This is
             eating, perfected for you.
           </p>
           <br />
-          <p>
+          <p className="text-white">
             Ready to eat better—and live smarter? Pick your plan. Own your day.{" "}
           </p>
         </div>

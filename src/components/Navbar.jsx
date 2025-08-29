@@ -61,7 +61,7 @@ const Navbar = () => {
                 className="h-8 w-auto lg:h-10"
               />
               <span className={`ml-3 text-xl lg:text-2xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-gray-900'
+                isScrolled ? 'text-gray-900' : 'text-gray-200'
               }`}  style={{ fontFamily: '"Playfair Display", serif' }}>
                 MealVersity
               </span>
@@ -79,7 +79,7 @@ const Navbar = () => {
                     ? 'text-orange-600'
                     : isScrolled 
                       ? 'text-gray-700 hover:text-orange-600' 
-                      : 'text-gray-700 hover:text-orange-600'
+                      : 'text-gray-200 hover:text-orange-600'
                 }`}
               >
                 {item.name}
@@ -106,7 +106,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-gray-700 hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors duration-200"
+              className="p-2 rounded-md text-gray-400 hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors duration-200"
               aria-expanded={isOpen}
               aria-label="Toggle navigation menu"
             >

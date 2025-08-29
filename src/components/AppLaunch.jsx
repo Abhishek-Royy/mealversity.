@@ -65,7 +65,7 @@ const AppLaunch = () => {
   ]
 
   return (
-    <section id="app-launch" className="pt-30  pb-20  lg:pt-52" style={{ backgroundColor: '#FFF5D5' }}>
+    <section id="app-launch" className="pt-30  pb-20  lg:pt-52" style={{ background: "linear-gradient(135deg, #1a2a1a 0%, #2c3c2c 100%)" }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Container */}
         <div className={`relative bg-gradient-to-r from-yellow-50 to-blue-50 rounded-3xl border-2 border-dashed border-teal-400 p-8 md:p-12 shadow-2xl transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
