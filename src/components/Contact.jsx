@@ -62,14 +62,14 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-30  lg:pt-52" style={{ background: "linear-gradient(135deg, #1a2a1a 0%, #2c3c2c 100%)" }}>
+    <section id="contact" className="py-30  lg:pt-52" style={{ backgroundColor: '#FFF5D5' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#FEC100] mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A365D] mb-6">
             Contact Us
           </h2>
-          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
             We'd love to hear from you! Reach out to us with any questions or feedback.
           </p>
         </div>

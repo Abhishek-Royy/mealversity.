@@ -17,24 +17,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close menu when route changes
-  useEffect(() => {
-    setIsOpen(false)
-  }, [location])
-
-  // Prevent body scrolling when menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'unset'
-    }
-    
-    return () => {
-      document.body.style.overflow = 'unset'
-    }
-  }, [isOpen])
-
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
@@ -53,26 +35,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-         <div className="flex-shrink-0">
-  <Link to="/" className="flex items-center">
-    <img 
-      src="/logo.png" 
-      alt="Mealversity Logo" 
-      className={`h-8 w-auto lg:h-10 transition duration-300 ${
-        isScrolled ? 'invert-0 brightness-100' : 'invert brightness-0 contrast-200'
-      }`}
-    />
-    <span 
-      className={`ml-3 text-xl lg:text-2xl font-bold transition-colors duration-300 ${
-        isScrolled ? 'text-gray-900' : 'text-gray-200'
-      }`}  
-      style={{ fontFamily: '"Playfair Display", serif' }}
-    >
-      MealVersity
-    </span>
-  </Link>
-</div>
-
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/logo.png" 
+                alt="Mealversity Logo" 
+                className="h-8 w-auto lg:h-10"
+              />
+              <span className={`ml-3 text-xl lg:text-2xl font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-gray-900'
+              }`}  style={{ fontFamily: '"Playfair Display", serif' }}>
+                MealVersity
+              </span>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
@@ -80,12 +56,12 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-3 py-2 text-sm font-bold rounded-md transition-all duration-200 relative group ${
+                className={`px-3 py-2 text-sm font-bold rounded-md transition-all duration-200 relative ${
                   location.pathname === item.path
                     ? 'text-orange-600'
                     : isScrolled 
                       ? 'text-gray-700 hover:text-orange-600' 
-                      : 'text-gray-200 hover:text-orange-600'
+                      : 'text-gray-700 hover:text-orange-600'
                 }`}
               >
                 {item.name}
@@ -109,46 +85,35 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-md text-gray-400 hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors duration-200"
-              aria-expanded={isOpen}
-              aria-label="Toggle navigation menu"
+              className="text-gray-700 hover:text-orange-600 focus:outline-none focus:text-orange-600"
             >
               {isOpen ? (
-                <X className="h-6 w-6" />
+                <X className="block h-6 w-6" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="block h-6 w-6" />
               )}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Navigation Menu Overlay */}
-      {isOpen && (
-        <div 
-          className="lg:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40 mt-16"
-          onClick={() => setIsOpen(false)}
-          aria-hidden="true"
-        ></div>
-      )}
-
       {/* Mobile Navigation Menu */}
-      <div className={`lg:hidden fixed top-16 left-0 right-0 z-50 transition-all duration-300 ease-in-out transform ${
+      <div className={`lg:hidden transition-all duration-300 ease-in-out ${
         isOpen 
-          ? 'translate-y-0 opacity-100' 
-          : '-translate-y-4 opacity-0 pointer-events-none'
+          ? 'max-h-96 opacity-100' 
+          : 'max-h-0 opacity-0 pointer-events-none'
       }`}>
-        <div className="bg-white/98 backdrop-blur-md border-t border-orange-100 shadow-xl mx-4 rounded-b-lg overflow-hidden">
-          <div className="px-2 pt-2 pb-4 space-y-1">
+        <div className="bg-white/95 backdrop-blur-md border-t border-orange-100 shadow-lg">
+          <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className={`flex items-center px-4 py-3 text-base font-medium rounded-md transition-all duration-200 relative ${
+                className={`block w-full text-left px-3 py-2 text-base font-medium rounded-md transition-all duration-200 relative ${
                   location.pathname === item.path
                     ? 'text-orange-600 bg-orange-50'
                     : 'text-gray-700 hover:text-orange-600 hover:bg-orange-50'
@@ -163,9 +128,9 @@ const Navbar = () => {
             ))}
             
             {/* Mobile Download Button */}
-            <div className="px-2 pt-3 pb-2">
+            <div className="pt-4 pb-3">
               <Link to="/app-launch" onClick={() => setIsOpen(false)}>
-                <button className="w-full bg-gradient-to-r from-[#044735] to-[#0a7a5a] hover:from-[#033a2c] hover:to-[#09664b] text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-200 shadow-lg active:scale-95">
+                <button className="w-full bg-gradient-to-r from-[#044735] to-[#0a7a5a]  hover:from-[#033a2c] hover:to-[#09664b] text-white px-6 py-3 rounded-full text-base font-semibold transition-all duration-200 shadow-lg">
                   Download App
                 </button>
               </Link>

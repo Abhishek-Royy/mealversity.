@@ -3,7 +3,9 @@ import {
   Users,
   Target,
   Heart,
+  Shield,
   Star,
+  Zap,
   Check,
   Truck,
   CreditCard,
@@ -22,7 +24,7 @@ const Features = () => {
     <section
       id="features"
       className="relative overflow-hidden pt-30 pb-1 lg:pt-52 lg:pb-2"
-      style={{ background: "linear-gradient(135deg, #1a2a1a 0%, #2c3c2c 100%)" }}
+      style={{ backgroundColor: "#FFF5D5" }}
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Who We Are Section */}
@@ -32,17 +34,16 @@ const Features = () => {
             <div className="space-y-8 animate-fade-in-left">
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full text-lg font-semibold mb-6 shadow-lg">
                 <Users className="w-5 h-5" />
-                The World Of MealVersity
+               The World Of MealVersity
               </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#FEC100] leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold text-[#1A365D] leading-tight">
                 Not just another food delivery service, we’re delivering peace of mind
               </h2>
-              <p className="text-lg text-gray-200 leading-relaxed mb-8">
-                MealVersity here to give you back your time, your energy, and your joy around food — with meals crafted thoughtfully and delivered respectfully. <br/> 
-                We bring you food that’s fresh, flavorful, and made with the kind of care you’d only expect at home.
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+               MealVersity here to give you back your time, your energy, and your joy around food — with meals crafted thoughtfully and delivered respectfully. <br/> We bring you food that’s fresh, flavorful, and made with the kind of care you’d only expect at home.
               </p>
               <div className="space-y-6">
-                <p className="text-lg text-gray-200 font-semibold">
+                <p className="text-xl text-gray-700 font-semibold">
                   Whether you're:
                 </p>
                 <ul className="space-y-4">
@@ -59,15 +60,15 @@ const Features = () => {
                       style={{ animationDelay: `${index * 150}ms` }}
                     >
                       <div className="w-3 h-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mt-2 flex-shrink-0 shadow-lg animate-pulse"></div>
-                      <span className="text-lg text-gray-200 font-medium">
+                      <span className="text-lg text-gray-700 font-medium">
                         {item}
                       </span>
                     </li>
                   ))}
                 </ul>
-                <div className="bg-gradient-to-r from-orange-100/90 to-yellow-100/90 rounded-2xl p-6 border border-orange-200 shadow-lg">
-                  <p className="text-xl text-gray-900 font-bold text-center">
-                    You focus on your purpose. We’ll focus on your plate. Welcome to MealVersity—reimagined.
+                <div className="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-2xl p-6 border border-orange-200">
+                  <p className="text-xl text-gray-800 font-bold text-center">
+                   You focus on your purpose. We’ll focus on your plate. Welcome to MealVersity—reimagined.
                   </p>
                 </div>
               </div>
@@ -76,24 +77,28 @@ const Features = () => {
             {/* Right Illustration */}
             <div className="relative flex justify-center lg:justify-end animate-fade-in-right">
               <div className="relative w-full max-w-lg">
-                <div className="relative overflow-hidden rounded-2xl">
-                  <img
-                    src="/about.png"
-                    alt="Who We Are - MealVersity team and community"
-                    className="w-full h-auto object-cover rounded-2xl"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center mt-6">
-                  <p className="text-lg text-gray-200 font-semibold">
-                    Delicious meals, happy people
-                  </p>
+                <div className="relative">
+                  {/* Who We Are Image */}
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <img
+                      src="/whoweare1.png"
+                      alt="Who We Are - MealVersity team and community"
+                      className="w-full h-auto object-cover rounded-2xl"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  {/* Bottom text */}
+                  <div className="text-center mt-6">
+                    <p className="text-lg text-gray-700 font-semibold">
+                      Delicious meals, happy people
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
 
         {/* Our Mission Section */}
         <div className="mb-24">
@@ -121,10 +126,10 @@ const Features = () => {
                 <Target className="w-5 h-5" />
                 Our Mission
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold text-[#FEC100] leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold text-[#1A365D] leading-tight">
                 At MealVersity, We Don’t Just Feed You — We Transform Your Day
               </h2>
-              <p className="text-xl text-gray-200 leading-relaxed">
+              <p className="text-xl text-gray-700 leading-relaxed">
                 When you choose us, you’re not just eating — you’re upgrading your life, one meal at a time. Here’s what changes the moment that tiffin arrives: 
               </p>
               
@@ -179,10 +184,10 @@ const Features = () => {
               <TrendingUp className="w-5 h-5" />
               Key Highlights
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#FEC100] mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A365D] mb-6">
               What Makes MealVersity Special
             </h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
              MealVersity reimagines food delivery by serving communities, empowering dreams, and creating a healthier, happier ecosystem.
             </p>
           </div>
@@ -271,7 +276,7 @@ const Features = () => {
                 <Heart className="w-5 h-5" />
                 Our Values
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#FEC100] leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#1A365D] via-blue-800 to-[#1A365D] bg-clip-text text-transparent leading-tight">
                 What drives us forward
               </h2>
               <div className="space-y-6">
@@ -349,10 +354,10 @@ const Features = () => {
               <Target className="w-5 h-5" />
               Common Food Challenges?
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#FEC100] mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A365D] mb-6">
               We understand your daily struggles with food
             </h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Here's how we solve them with our innovative approach
             </p>
           </div>
@@ -423,10 +428,10 @@ const Features = () => {
               <Award className="w-5 h-5" />
               Our Solutions
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#FEC100] mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1A365D] mb-6">
               Comprehensive solutions to all your food challenges
             </h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               We provide innovative solutions that make healthy eating
               effortless
             </p>
