@@ -81,7 +81,7 @@ const Features = () => {
                   {/* Who We Are Image */}
                   <div className="relative overflow-hidden rounded-2xl">
                     <img
-                      src="/whoweare1.png"
+                      src="/features.jpg"
                       alt="Who We Are - MealVersity team and community"
                       className="w-full h-auto object-cover rounded-2xl"
                       loading="lazy"
@@ -110,7 +110,7 @@ const Features = () => {
                   {/* Mission Image */}
                   <div className="relative overflow-hidden rounded-2xl">
                     <img
-                      src="/mission.png"
+                      src="/mission2.jpg"
                       alt="Our Mission - MealVersity mission and values"
                       className="w-full h-auto object-cover rounded-2xl"
                       loading="lazy"
@@ -328,7 +328,7 @@ const Features = () => {
                   {/* Dining Image */}
                   <div className="relative overflow-hidden rounded-2xl">
                     <img
-                      src="/dining-img.png"
+                      src="/diveus.jpg"
                       alt="Our Values - Family dining together"
                       className="w-full h-auto object-cover rounded-2xl"
                       loading="lazy"
